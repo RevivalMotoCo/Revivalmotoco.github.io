@@ -81,7 +81,7 @@
       position: absolute;
       inset: 0;
       background: url('bsa-workshop.png') center 35% / cover no-repeat;
-      filter: brightness(0.38);
+      filter: brightness(0.55);
       will-change: transform;
     }
 
@@ -620,6 +620,7 @@
   <ul class="nav-links">
     <li><a href="#story">Our Story</a></li>
     <li><a href="#stock">For Sale</a></li>
+    <li><a href="#sell">Sell Your Bike</a></li>
     <li><a href="#watch">Watch</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -631,9 +632,8 @@
   <div class="hero-fade"></div>
   <div class="hero-content">
     <span class="hero-tag">Bridgnorth, Shropshire</span>
-    <h1 class="hero-title">Bikes Worth<br>Riding Again</h1>
+    <h1 class="hero-title">We Find It.<br>We Fix It.<br>You Get To<br>Ride It.</h1>
     <p class="hero-body">We find motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then we sort them out and sell them honestly. That's it, really.</p>
-    <p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:0.2em; color:var(--rust); margin-bottom:2.5rem;">— Mildly Competent —</p>
     <a href="#stock" class="btn">See What's For Sale</a>
     <a href="#story" class="btn btn-ghost">Our Story</a>
   </div>
@@ -655,7 +655,7 @@
         <p class="eyebrow">Who We Are</p>
         <h2 class="heading">A Bloke<br>With a<br>Workshop</h2>
         <div class="body-text">
-          <p>My name's Conrad. I've had a lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs — and a working knowledge of how to keep most of them running. Mildly competent, but genuinely passionate.</p>
+          <p>My name's Conrad. I've had a lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs — and more questions than answers, but some tools. Mildly competent, but genuinely passionate.</p>
           <p>Revival Moto Co is straightforward: I find motorcycles that have been neglected, ignored, or left to quietly decompose, and I make them right. All kinds — anything with a bit of character and a story worth continuing.</p>
           <p><strong>No fakery. No shortcuts.</strong> Every bike gets properly looked at before it goes anywhere near a for-sale ad. If I find something worth knowing about, you'll know about it.</p>
           <p>Based in Shropshire. Working out of a proper workshop. Making it up as I go along, but in a mildly competent way.</p>
@@ -725,9 +725,12 @@
     </div>
     <div class="stock-grid">
       <div class="stock-empty">
-        <h3>Nothing Here Yet</h3>
-        <p>We're being annoyingly thorough with the first ones. Follow us on YouTube to watch the builds happen — bikes go on sale when they're actually ready.</p>
-        <a href="#contact" class="btn">Get Notified When Stock Lands</a>
+        <div style="border: 1px solid var(--rust); padding: 3rem 2rem; max-width: 500px; margin: 0 auto;">
+          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust); margin-bottom:1rem;">Coming Soon</p>
+          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.8rem;">First Builds Incoming</h3>
+          <p style="color:var(--muted); font-size:0.88rem; margin-bottom:2rem;">We're being annoyingly thorough with the first ones. Watch the builds happen on YouTube — bikes go on sale when they're actually ready.</p>
+          <a href="#contact" class="btn">Get Notified When Stock Lands</a>
+        </div>
       </div>
     </div>
   </div>
@@ -752,6 +755,9 @@
           <p>Every bike gets filmed from the day it arrives to the day it leaves. Raw footage — the finds, the fixes, and the moments where something comes apart that definitely wasn't supposed to.</p>
           <p>Subscribe and you'll see all of it. The good bits and the creative swearing.</p>
         </div>
+        <div style="border: 1px solid var(--rust); display:inline-block; padding: 0.5rem 1.2rem; margin: 1.2rem 0;">
+          <span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust);">Channel Launching Soon</span>
+        </div>
         <br>
         <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank" class="yt-link">Subscribe on YouTube →</a>
       </div>
@@ -759,7 +765,54 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- SELL YOUR BIKE -->
+<section class="section section--mid" id="sell">
+  <div class="inner">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Sell Your Bike</p>
+        <h2 class="heading">Got One<br>We Should<br>Know About?</h2>
+        <div class="body-text">
+          <p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
+          <p>We're ideally looking for <strong>Japanese, Italian or British</strong> bikes, but we'll consider anything with a bit of character. If you think it's interesting, tell us about it.</p>
+          <p>We're based in Bridgnorth, Shropshire. <strong>Within 50 miles is ideal</strong>, but we'll travel for the right bike.</p>
+          <p style="color:var(--muted); font-size:0.85rem;">We'll need a V5 in the seller's name and the bike needs to be complete — not crashed or written off.</p>
+        </div>
+      </div>
+      <div>
+        <div class="form-row">
+          <label>Your Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <label>Phone (optional)</label>
+          <input type="tel" placeholder="Your number">
+        </div>
+        <div class="form-row">
+          <label>The Bike — Make, Model, Year</label>
+          <input type="text" placeholder="e.g. Honda CB750 1979">
+        </div>
+        <div class="form-row">
+          <label>Registration Number</label>
+          <input type="text" placeholder="e.g. ABC 123D">
+        </div>
+        <div class="form-row">
+          <label>Your Location</label>
+          <input type="text" placeholder="Town / Postcode">
+        </div>
+        <div class="form-row">
+          <label>Tell Us About It</label>
+          <textarea placeholder="Mileage, condition, what it needs, how long you've had it, asking price if you have one in mind..."></textarea>
+        </div>
+        <button class="btn form-submit" onclick="handleSellSubmit(event)">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="section section--dark" id="contact">
   <div class="inner">
     <div class="contact-grid">
@@ -767,7 +820,7 @@
       <div>
         <p class="eyebrow">Get In Touch</p>
         <h2 class="heading">Talk<br>To Us</h2>
-        <p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a bike? Want to know when something lands? Got a machine gathering dust that deserves better? We're all ears. Especially for that last one.</p>
+        <p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a specific bike? Want to know when something lands? Any other questions — we're all ears.</p>
 
         <div class="form-row">
           <label>Name</label>
@@ -783,7 +836,6 @@
             <option value="">Select...</option>
             <option>A bike I'm looking for</option>
             <option>A bike currently in stock</option>
-            <option>Selling a bike to Revival</option>
             <option>General enquiry</option>
           </select>
         </div>
@@ -815,14 +867,25 @@
     </div>
     <div class="footer-social">
       <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube</a>
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">Facebook</a>
+      <a href="https://www.instagram.com/RevivalMotoCo" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@conradwebster863" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com/profile.php?id=61589397403742" target="_blank">Facebook</a>
     </div>
   </div>
 </footer>
 
 <script>
+  function handleSellSubmit(e) {
+    e.preventDefault();
+    const btn = e.target;
+    btn.textContent = 'Enquiry Sent ✓';
+    btn.style.background = '#2d6e40';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry';
+      btn.style.background = '';
+    }, 3000);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target;
