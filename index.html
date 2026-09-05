@@ -43,8 +43,9 @@
       --charcoal: #1c1b1b;
       --rust: #a83419;
       --rust-light: #c94220;
+      --rust-text: #e87658;
       --cream: #e8e0d0;
-      --muted: #777;
+      --muted: #aaa398;
       --white: #fff;
     }
 
@@ -579,6 +580,15 @@
       padding-bottom: 2px;
     }
 
+    .hero-tag,
+    .eyebrow,
+    .project-status,
+    .bike-price,
+    .yt-link,
+    .contact-direct a {
+      color: var(--rust-text);
+    }
+
     .yt-brand-thumb {
       display: flex;
       align-items: center;
@@ -814,11 +824,15 @@
         margin-top: 0.75rem;
       }
 
-      .section { padding: 4rem 1.25rem; }
+      .section { padding: 3.25rem 1.25rem; }
       .heading {
         font-size: clamp(2.8rem, 13vw, 4rem);
         margin-bottom: 1.35rem;
+        max-width: 100%;
+        overflow-wrap: normal;
+        word-break: normal;
       }
+      .heading br { display: none; }
       .eyebrow {
         font-size: 0.78rem;
         letter-spacing: 0.2em;
@@ -831,7 +845,7 @@
 
       .story-grid,
       .yt-grid,
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
       .story-images { gap: 4px; }
 
       .mosaic { grid-template-columns: 1fr 1fr; }
@@ -843,6 +857,7 @@
       .what-grid[style] { grid-template-columns: 1fr !important; }
       .what-card,
       .project-card { padding: 1.8rem 1.4rem; }
+      .project-card { min-height: auto; }
       .what-card p,
       .project-card p,
       .project-note,
@@ -855,7 +870,7 @@
 
       .trust-inner { grid-template-columns: 1fr; }
       .trust-item {
-        padding: 0.95rem 1rem;
+        padding: 0.75rem 1rem;
         font-size: 0.78rem;
         line-height: 1.45;
         border-right: none;
@@ -863,6 +878,8 @@
       }
 
       .strip img { height: 200px; }
+      .stock-empty { padding: 1.25rem 0; }
+      .stock-empty > div { padding: 2rem 1.1rem !important; }
       .contact-img { aspect-ratio: 16/9; }
       .contact-brand-panel { min-height: 300px; padding: 2rem 1.25rem; }
       .contact-brand-panel p { font-size: 1.7rem; }
@@ -955,7 +972,7 @@
       </div>
       <div>
         <p class="eyebrow">Who We Are</p>
-        <h2 class="heading">A Bloke<br>With a<br>Workshop</h2>
+        <h2 class="heading">A Bloke<br> With a<br> Workshop</h2>
         <div class="body-text">
           <p>My name's Conrad. I've had a lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs. Revival Moto Co is what happens when that obsession finally gets a proper workshop of its own.</p>
           <p>Revival Moto Co is straightforward: I find motorcycles that have been neglected, ignored, or left to quietly decompose, and I make them right. All kinds — anything with a bit of character and a story worth continuing.</p>
@@ -971,7 +988,7 @@
 <section class="section section--dark" id="projects">
   <div class="inner">
     <p class="eyebrow">In The Workshop</p>
-    <h2 class="heading">What We're<br>Working On</h2>
+    <h2 class="heading">What We're<br> Working On</h2>
     <p class="body-text">Bikes appear here before they appear for sale. You'll be able to follow what arrived, what we found, what we fixed and when each one is ready to ride.</p>
     <div class="project-grid">
       <div class="project-card">
@@ -1006,7 +1023,7 @@
 <section class="section section--mid" id="services">
   <div class="inner">
     <p class="eyebrow">How It Works</p>
-    <h2 class="heading">How Revival<br>Works</h2>
+    <h2 class="heading">How Revival<br> Works</h2>
     <div class="what-grid" style="grid-template-columns: repeat(5,1fr);">
       <div class="what-card">
         <div class="what-num">01</div>
@@ -1049,7 +1066,7 @@
     <div class="stock-grid">
       <div class="stock-empty">
         <div style="border: 1px solid var(--rust); padding: 3rem 2rem; max-width: 500px; margin: 0 auto;">
-          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust); margin-bottom:1rem;">Coming Soon</p>
+          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust-text); margin-bottom:1rem;">Coming Soon</p>
           <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.8rem;">First Builds Incoming</h3>
           <p style="color:var(--muted); font-size:0.88rem; margin-bottom:2rem;">We're being annoyingly thorough with the first ones. Follow them in the workshop and on YouTube — they go on sale only when they're properly ready.</p>
           <a href="#contact" class="btn">Tell Me When A Bike Is Ready</a>
@@ -1063,7 +1080,7 @@
 <section class="section section--mid" id="difference">
   <div class="inner">
     <p class="eyebrow">The RMC Difference</p>
-    <h2 class="heading">Buying An Old Bike<br>Shouldn't Be A Leap Of Faith</h2>
+    <h2 class="heading">Buying An Old Bike<br> Shouldn't Be A Leap Of Faith</h2>
     <div class="body-text" style="max-width:760px;">
       <p>We don't hide the process. Every retail bike is inspected, recommissioned as needed, road tested and documented. You'll be able to see what we found, what we changed, what we left alone and why.</p>
       <p><strong>No cosmetic theatre covering mechanical neglect.</strong> No pretending a 25-year-old motorcycle is brand new. Just a properly sorted bike, an honest description and the evidence to back it up.</p>
@@ -1085,13 +1102,13 @@
       </div>
       <div class="yt-text">
         <p class="eyebrow">On YouTube</p>
-        <h2 class="heading">Watch It<br>Happen</h2>
+        <h2 class="heading">Watch It<br> Happen</h2>
         <div class="body-text">
           <p>Every bike gets filmed from the day it arrives to the day it leaves. The finds, the fixes, the road tests — and the moments where something comes apart that definitely wasn't supposed to.</p>
           <p>Subscribe and you'll see all of it. The good bits and the creative swearing.</p>
         </div>
         <div style="border: 1px solid var(--rust); display:inline-block; padding: 0.5rem 1.2rem; margin: 1.2rem 0;">
-          <span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust);">Channel Launching Soon</span>
+          <span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust-text);">Channel Launching Soon</span>
         </div>
         <br>
         <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank" class="yt-link">Subscribe on YouTube →</a>
@@ -1106,7 +1123,7 @@
     <div class="contact-grid">
       <div>
         <p class="eyebrow">Sell Your Bike</p>
-        <h2 class="heading">Got One<br>We Should<br>Know About?</h2>
+        <h2 class="heading">Got One<br> We Should<br> Know About?</h2>
         <div class="body-text">
           <p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
           <p>We're ideally looking for <strong>Japanese, Italian or British</strong> bikes, but we'll consider anything with a bit of character. If you think it's interesting, tell us about it.</p>
@@ -1161,7 +1178,7 @@
       </div>
       <div>
         <p class="eyebrow">Get In Touch</p>
-        <h2 class="heading">Talk<br>To Us</h2>
+        <h2 class="heading">Talk<br> To Us</h2>
         <p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a specific bike? Want to know when something lands? Any other questions — we're all ears.</p>
 
         <form id="contact-form">
@@ -1205,7 +1222,7 @@
 <section class="section section--mid" id="visit">
   <div class="inner">
     <p class="eyebrow">Visit / Contact</p>
-    <h2 class="heading">Come And<br>Talk Motorcycles</h2>
+    <h2 class="heading">Come And<br> Talk Motorcycles</h2>
     <div class="what-grid" style="grid-template-columns: repeat(3,1fr);">
       <div class="what-card">
         <h3>Workshop</h3>
@@ -1217,7 +1234,7 @@
       </div>
       <div class="what-card">
         <h3>Contact</h3>
-        <p><a href="mailto:info@revivalmotoco.co.uk" style="color:var(--rust); text-decoration:none;">info@revivalmotoco.co.uk</a><br>Collection and delivery can be arranged.</p>
+        <p><a href="mailto:info@revivalmotoco.co.uk" style="color:var(--rust-text); text-decoration:none;">info@revivalmotoco.co.uk</a><br>Collection and delivery can be arranged.</p>
       </div>
     </div>
   </div>
