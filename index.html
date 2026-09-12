@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revival Moto Co — Motorcycle Recommissioning & Sales, Aston Munslow, Shropshire</title>
-  <meta name="description" content="Revival Moto Co finds interesting motorcycles, recommissions them with care and sells them honestly. Based in Aston Munslow, Shropshire.">
+  <meta name="description" content="Revival Moto Co restores and recommissions carefully selected motorcycles for sale, documenting what we find and what we do. Aston Munslow, Shropshire.">
   <meta name="keywords" content="motorcycle recommissioning, classic motorcycles for sale, vintage motorcycles Shropshire, motorcycle workshop Shropshire, used motorcycles UK, barn find motorcycles">
   <meta property="og:title" content="Revival Moto Co — Honest Motorcycles, Shropshire">
-  <meta property="og:description" content="We find neglected motorcycles, sort them out properly, and sell them honestly. Based in Aston Munslow, Shropshire.">
+  <meta property="og:description" content="Carefully selected motorcycles, properly recommissioned and honestly presented. Aston Munslow, Shropshire.">
   <meta property="og:image" content="https://revivalmotoco.github.io/bsa-workshop.png">
   <meta property="og:url" content="https://revivalmotoco.co.uk">
   <meta name="twitter:card" content="summary_large_image">
@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "AutoDealer",
     "name": "Revival Moto Co",
-    "description": "We find interesting motorcycles, recommission them with care and sell them honestly.",
+    "description": "Revival Moto Co restores and recommissions carefully selected motorcycles for sale, documenting what we find and what we do.",
     "url": "https://revivalmotoco.co.uk",
     "email": "info@revivalmotoco.co.uk",
     "address": {
@@ -43,12 +43,15 @@
       --charcoal: #1c1b1b;
       --rust: #c64a2d;
       --rust-light: #e05a36;
+      --rust-text: #ef7658;
       --cream: #e8e0d0;
-      --muted: #777;
+      --muted: #aaa39a;
       --white: #fff;
     }
 
     html { scroll-behavior: smooth; }
+
+    section[id] { scroll-margin-top: 78px; }
 
     body {
       background: var(--black);
@@ -96,6 +99,37 @@
     }
 
     .nav-links a:hover { color: var(--cream); }
+
+    .nav-toggle {
+      display: none;
+      width: 46px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--cream);
+      cursor: pointer;
+    }
+
+    .nav-toggle span,
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      content: '';
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle span { position: relative; }
+    .nav-toggle span::before { position: absolute; top: -6px; }
+    .nav-toggle span::after { position: absolute; top: 6px; }
+
+    nav.menu-open .nav-toggle span { background: transparent; }
+    nav.menu-open .nav-toggle span::before { top: 0; transform: rotate(45deg); }
+    nav.menu-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 
     .nav-links a.nav-cta {
       color: var(--white);
@@ -179,6 +213,7 @@
       cursor: pointer;
       transition: background 0.2s;
       font-family: 'Inter', sans-serif;
+      white-space: nowrap;
     }
 
     .btn:hover { background: var(--rust-light); }
@@ -219,6 +254,57 @@
     }
 
     .trust-item:last-child { border-right: none; }
+
+    /* ── PRIMARY ROUTES ── */
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .route-card {
+      min-height: 260px;
+      padding: 2.4rem;
+      background: var(--charcoal);
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.2s ease;
+    }
+
+    .route-card:hover { background: #242222; }
+
+    .route-card span {
+      color: var(--rust-text);
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .route-card h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--white);
+      font-size: 2.35rem;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      margin: 2.2rem 0 0.8rem;
+    }
+
+    .route-card p {
+      color: rgba(232,224,208,0.72);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .route-arrow {
+      margin-top: 1.5rem;
+      color: var(--rust-text);
+      font-weight: 600;
+    }
 
     /* ── FULL-BLEED IMAGE BREAK ── */
     .img-break {
@@ -766,18 +852,30 @@
         padding: 0 1rem;
       }
       .nav-logo img { height: 50px; }
+      .nav-toggle { display: inline-flex; }
       .nav-links {
-        display: flex;
-        gap: 0;
-        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 0.75rem 1rem 1.2rem;
+        background: rgba(17,16,16,0.99);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
       }
-      .nav-links li { display: none; }
-      .nav-links li:nth-child(4) { display: block; }
+      nav.menu-open .nav-links { display: block; }
+      .nav-links li { display: block; }
+      .nav-links a {
+        display: block;
+        padding: 0.8rem 0.25rem;
+        color: var(--cream);
+        font-size: 0.82rem;
+      }
       .nav-links a.nav-cta {
         display: block;
-        padding: 0.65rem 0.8rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
+        margin-top: 0.35rem;
+        padding: 0.75rem;
+        text-align: center;
       }
 
       .hero {
@@ -793,7 +891,7 @@
         margin-bottom: 1rem;
       }
       .hero-title {
-        font-size: clamp(3.5rem, 17vw, 4.8rem);
+        font-size: clamp(3.2rem, 14.5vw, 4.8rem);
         line-height: 0.94;
         margin-bottom: 1.35rem;
       }
@@ -864,6 +962,9 @@
       .story-grid,
       .yt-grid,
       .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .route-grid { grid-template-columns: 1fr; }
+      .route-card { min-height: 0; padding: 1.8rem 1.4rem; }
+      .route-card h2 { margin-top: 1.3rem; }
       .story-images { gap: 4px; }
 
       .mosaic { grid-template-columns: 1fr 1fr; }
@@ -958,8 +1059,13 @@
 
     @media (max-width: 390px) {
       html { font-size: 16px; }
-      .hero-title { font-size: clamp(3.1rem, 17vw, 4.2rem); }
+      .hero-title { font-size: clamp(3rem, 14.5vw, 3.6rem); }
       .nav-links a.nav-cta { font-size: 0.66rem; padding: 0.6rem 0.65rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   
     /* ── PERSONAL BIKE HISTORY STRIP ── */
@@ -1032,13 +1138,14 @@
   <a href="#" class="nav-logo">
     <img src="logo.png" alt="Revival Moto Co">
   </a>
-  <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#services">How It Works</a></li>
-    <li><a href="#stock">For Sale</a></li>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span></span></button>
+  <ul class="nav-links" id="primary-navigation">
+    <li><a href="#stock">Motorcycles</a></li>
+    <li><a href="#projects">In The Workshop</a></li>
+    <li><a href="#services">Our Process</a></li>
     <li><a href="#sell" class="nav-cta">Sell Your Bike</a></li>
     <li><a href="#watch">Watch</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#story">About</a></li>
   </ul>
 </nav>
 
@@ -1051,7 +1158,7 @@
     <h1 class="hero-title">We Find It.<br>We Fix It.<br>You Get To<br>Ride It.</h1>
     <p class="hero-body">We find motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then we sort them out and sell them honestly. That's it, really.</p>
     <a href="#stock" class="btn">See What's For Sale</a>
-    <a href="#story" class="btn btn-ghost">Our Story</a>
+    <a href="#projects" class="btn btn-ghost">In The Workshop</a>
   </div>
 </section>
 
@@ -1066,6 +1173,38 @@
   </div>
 </div>
 
+<!-- PRIMARY ROUTES -->
+<section class="section section--dark" aria-label="Explore Revival Moto Co">
+  <div class="inner">
+    <div class="route-grid">
+      <a class="route-card" href="#stock">
+        <div>
+          <span>01 / Available machines</span>
+          <h2>Buy A Revival Motorcycle</h2>
+          <p>Carefully chosen bikes, properly prepared and offered only when we are satisfied they are ready.</p>
+        </div>
+        <div class="route-arrow">View motorcycles →</div>
+      </a>
+      <a class="route-card" href="#projects">
+        <div>
+          <span>02 / Current projects</span>
+          <h2>Follow The Workshop</h2>
+          <p>See each motorcycle arrive, discover what we find and follow the work before it reaches the showroom.</p>
+        </div>
+        <div class="route-arrow">See current projects →</div>
+      </a>
+      <a class="route-card" href="#sell">
+        <div>
+          <span>03 / Motorcycles wanted</span>
+          <h2>Sell Us Your Bike</h2>
+          <p>Have an interesting motorcycle that deserves its next chapter? Tell us what it is, where it is and its story.</p>
+        </div>
+        <div class="route-arrow">Tell us about it →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- STORY -->
 <section class="section section--dark" id="story">
   <div class="inner">
@@ -1079,7 +1218,7 @@
         <h2 class="heading">A Bloke<br>With a<br>Workshop</h2>
         <div class="body-text">
           <p>My name's Conrad. I've had a lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs. Revival Moto Co is what happens when that obsession finally gets a proper workshop of its own.</p>
-          <p>This isn't a faceless motorcycle dealership. It's a small independent business built around interesting bikes, proper workshop time and the sort of buying experience I'd want myself.</p>
+          <p>Our focus is simple: find and buy worthwhile motorcycles, prepare them properly and offer them for sale with the sort of information and buying experience I'd want myself.</p>
           <p><strong>No fakery. No shortcuts.</strong> Just used motorcycles, good work and a belief that their next chapter matters as much as the last one.</p>
           <p>Based in Aston Munslow, Shropshire.</p>
         </div>
@@ -1130,8 +1269,8 @@
 <!-- HOW REVIVAL WORKS -->
 <section class="section section--mid" id="services">
   <div class="inner">
-    <p class="eyebrow">How It Works</p>
-    <h2 class="heading">How Revival<br>Works</h2>
+    <p class="eyebrow">Our Motorcycles</p>
+    <h2 class="heading">How A Bike<br>Becomes A Revival</h2>
     <div class="what-grid" style="grid-template-columns: repeat(5,1fr);">
       <div class="what-card">
         <div class="what-num">01</div>
@@ -1243,32 +1382,32 @@
       <div>
         <form id="sell-form">
         <div class="form-row">
-          <label>Your Name</label>
-          <input type="text" name="name" placeholder="Your name" required>
+          <label for="sell-name">Your Name</label>
+          <input id="sell-name" type="text" name="name" placeholder="Your name" required>
         </div>
         <div class="form-row">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" required>
+          <label for="sell-email">Email</label>
+          <input id="sell-email" type="email" name="email" placeholder="your@email.com" required>
         </div>
         <div class="form-row">
-          <label>Phone (optional)</label>
-          <input type="tel" name="phone" placeholder="Your number">
+          <label for="sell-phone">Phone (optional)</label>
+          <input id="sell-phone" type="tel" name="phone" placeholder="Your number">
         </div>
         <div class="form-row">
-          <label>The Bike — Make, Model, Year</label>
-          <input type="text" name="bike" placeholder="e.g. Honda CB750 1979" required>
+          <label for="sell-bike">The Bike — Make, Model, Year</label>
+          <input id="sell-bike" type="text" name="bike" placeholder="e.g. Honda CB750 1979" required>
         </div>
         <div class="form-row">
-          <label>Registration Number</label>
-          <input type="text" name="reg" placeholder="e.g. ABC 123D">
+          <label for="sell-reg">Registration Number</label>
+          <input id="sell-reg" type="text" name="reg" placeholder="e.g. ABC 123D">
         </div>
         <div class="form-row">
-          <label>Your Location</label>
-          <input type="text" name="location" placeholder="Town / Postcode" required>
+          <label for="sell-location">Your Location</label>
+          <input id="sell-location" type="text" name="location" placeholder="Town / Postcode" required>
         </div>
         <div class="form-row">
-          <label>Tell Us About It</label>
-          <textarea name="message" placeholder="Mileage, condition, what it needs, how long you've had it, asking price if you have one in mind..."></textarea>
+          <label for="sell-message">Tell Us About It</label>
+          <textarea id="sell-message" name="message" placeholder="Mileage, condition, what it needs, how long you've had it, asking price if you have one in mind..."></textarea>
         </div>
         <button type="submit" class="btn form-submit">Send Enquiry</button>
         <p class="form-note">This opens your email app with the enquiry filled in — no Formspree account required.</p>
@@ -1292,26 +1431,26 @@
 
         <form id="contact-form">
         <div class="form-row">
-          <label>Name</label>
-          <input type="text" name="name" placeholder="Your name" required>
+          <label for="contact-name">Name</label>
+          <input id="contact-name" type="text" name="name" placeholder="Your name" required>
         </div>
         <div class="form-row">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" required>
+          <label for="contact-email">Email</label>
+          <input id="contact-email" type="email" name="email" placeholder="your@email.com" required>
         </div>
         <div class="form-row">
-          <label>What's it about?</label>
-          <select name="subject">
+          <label for="contact-subject">What's it about?</label>
+          <select id="contact-subject" name="subject">
             <option value="">Select...</option>
             <option>A bike I'm looking for</option>
             <option>A bike currently in stock</option>
-            <option>Workshop / recommissioning enquiry</option>
+            <option>Following a current project</option>
             <option>General enquiry</option>
           </select>
         </div>
         <div class="form-row">
-          <label>Message</label>
-          <textarea name="message" placeholder="Tell us what you're after..."></textarea>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Tell us what you're after..."></textarea>
         </div>
         <button type="submit" class="btn form-submit">Send Message</button>
         <p class="form-note">This opens your email app with the message filled in — no Formspree account required.</p>
@@ -1370,6 +1509,27 @@
 </footer>
 
 <script>
+  const nav = document.querySelector('nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  function closeMenu() {
+    nav.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
+  }
+
+  navToggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+
+  navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
   function sendFormByEmail(form, type) {
     const data = new FormData(form);
     const lines = [];
@@ -1405,7 +1565,7 @@
   // Subtle parallax
   const heroBg = document.getElementById('hero-bg');
   window.addEventListener('scroll', () => {
-    if (heroBg) {
+    if (heroBg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       heroBg.style.transform = `translateY(${window.scrollY * 0.18}px)`;
     }
   }, { passive: true });
