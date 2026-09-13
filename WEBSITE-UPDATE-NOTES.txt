@@ -1,0 +1,21 @@
+REVIVAL MOTO CO — WEBSITE UPDATE NOTES
+
+FORM ACTIVATION
+The Sell Your Bike and Contact forms use FormSubmit because GitHub Pages is a static host and cannot send email or receive file uploads by itself.
+
+After the updated site is live, make ONE test submission from the live website. FormSubmit will send an activation email to info@revivalmotoco.co.uk. Click its confirmation link. After activation, subsequent submissions are forwarded to that inbox.
+
+Photo uploads:
+- Sell Your Bike accepts up to 10 JPG/PNG/WebP photos.
+- The browser blocks more than 10 files.
+- Total attachment size is limited to 10MB by FormSubmit.
+
+ADDING A MOTORCYCLE
+1. Upload its photos to the repository.
+2. Add one complete record to motorcycles.js.
+3. The homepage uses that same record for Current Stock.
+4. Its full page is motorcycle.html?id=THE-ID.
+5. Changing status to sold removes it from Current Stock and places it in the hidden-until-used Sold Archive section.
+6. A customer review only displays when review is populated AND reviewPermission is true.
+
+The single motorcycles.js record is the canonical website source for price, mileage, model and derivative. Use the same record when writing Auto Trader, eBay and social adverts.
