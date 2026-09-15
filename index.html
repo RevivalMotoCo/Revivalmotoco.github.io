@@ -74,10 +74,29 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
     .nav-logo img {
       height: 60px;
       width: auto;
       display: block;
+    }
+
+    .nav-wordmark {
+      display: none;
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--cream);
+      font-size: 1.15rem;
+      line-height: 0.9;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -765,7 +784,9 @@
         height: 70px;
         padding: 0 1rem;
       }
-      .nav-logo img { height: 50px; }
+      .nav-logo { gap: 0.55rem; }
+      .nav-logo img { height: 48px; }
+      .nav-wordmark { display: block; }
       .nav-links {
         display: flex;
         gap: 0;
@@ -775,9 +796,10 @@
       .nav-links li:nth-child(4) { display: block; }
       .nav-links a.nav-cta {
         display: block;
-        padding: 0.65rem 0.8rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
+        padding: 0.62rem 0.72rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.09em;
+        white-space: nowrap;
       }
 
       .hero {
@@ -1042,8 +1064,9 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="#" class="nav-logo" aria-label="Revival Moto Co home">
     <img src="logo.png" alt="Revival Moto Co">
+    <span class="nav-wordmark">Revival<br>Moto Co</span>
   </a>
   <ul class="nav-links">
     <li><a href="#story">Our Story</a></li>
