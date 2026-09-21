@@ -1,1476 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revival Moto Co — Motorcycle Recommissioning & Sales, Aston Munslow, Shropshire</title>
-  <meta name="description" content="Revival Moto Co finds interesting motorcycles, recommissions them with care and sells them honestly. Based in Aston Munslow, Shropshire.">
-  <meta name="keywords" content="motorcycle recommissioning, classic motorcycles for sale, vintage motorcycles Shropshire, motorcycle workshop Shropshire, used motorcycles UK, barn find motorcycles">
-  <meta property="og:title" content="Revival Moto Co — Honest Motorcycles, Shropshire">
-  <meta property="og:description" content="We find neglected motorcycles, sort them out properly, and sell them honestly. Based in Aston Munslow, Shropshire.">
-  <meta property="og:image" content="https://revivalmotoco.github.io/bsa-workshop.png">
-  <meta property="og:url" content="https://revivalmotoco.co.uk">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoDealer",
-    "name": "Revival Moto Co",
-    "description": "We find interesting motorcycles, recommission them with care and sell them honestly.",
-    "url": "https://revivalmotoco.co.uk",
-    "email": "info@revivalmotoco.co.uk",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Aston Munslow",
-      "addressRegion": "Shropshire",
-      "addressCountry": "GB"
-    },
-    "sameAs": [
-      "https://www.youtube.com/@RevivalMotoCo",
-      "https://www.instagram.com/RevivalMotoCo",
-      "https://www.tiktok.com/@conradwebster863",
-      "https://www.facebook.com/profile.php?id=61589397403742"
-    ],
-    "priceRange": "££"
-  }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --black: #111010;
-      --charcoal: #1c1b1b;
-      --rust: #c64a2d;
-      --rust-light: #e05a36;
-      --cream: #e8e0d0;
-      --muted: #777;
-      --white: #fff;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--black);
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2.5rem;
-      height: 78px;
-      background: rgba(17,16,16,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      flex-shrink: 0;
-    }
-
-    .nav-logo img {
-      height: 60px;
-      width: auto;
-      display: block;
-    }
-
-    .nav-wordmark {
-      display: none;
-      font-family: 'Bebas Neue', sans-serif;
-      color: var(--cream);
-      font-size: 1.15rem;
-      line-height: 0.9;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--cream); }
-
-    .nav-links a.nav-cta {
-      color: var(--white);
-      border: 1px solid var(--rust-light);
-      padding: 0.55rem 0.85rem;
-    }
-
-    .nav-links a.nav-cta:hover { background: var(--rust); color: var(--white); }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 760px;
-      height: 100svh;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-      padding-top: 78px; /* keep hero copy clear of the fixed navigation */
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('bsa-workshop.png') center 35% / cover no-repeat;
-      filter: brightness(0.55);
-      will-change: transform;
-    }
-
-    .hero-fade {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top,
-        #111010 0%,
-        rgba(17,16,16,0.5) 50%,
-        transparent 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      padding: 3rem 2.5rem 4.5rem;
-      max-width: 780px;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3.8rem, 7.4vw, 7.4rem);
-      line-height: 0.92;
-      letter-spacing: 0.015em;
-      color: var(--white);
-      margin-bottom: 1.6rem;
-    }
-
-    .hero-body {
-      font-size: 1.05rem;
-      color: rgba(232,224,208,0.72);
-      max-width: 460px;
-      margin-bottom: 2.5rem;
-      line-height: 1.75;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--rust);
-      color: var(--white);
-      text-decoration: none;
-      padding: 0.9rem 2.4rem;
-      font-size: 0.74rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .btn:hover { background: var(--rust-light); }
-
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid rgba(232,224,208,0.3);
-      color: var(--cream);
-      margin-left: 1rem;
-    }
-
-    .btn-ghost:hover {
-      background: rgba(232,224,208,0.08);
-    }
-
-    /* ── TRUST STRIP ── */
-    .trust-strip {
-      background: #0a0a0a;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .trust-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    .trust-item {
-      padding: 1.05rem 1rem;
-      text-align: center;
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(232,224,208,0.68);
-      border-right: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .trust-item:last-child { border-right: none; }
-
-    /* ── FULL-BLEED IMAGE BREAK ── */
-    .img-break {
-      width: 100%;
-      display: block;
-      height: 55vw;
-      max-height: 640px;
-      min-height: 300px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* ── SECTION SCAFFOLDING ── */
-    .section { padding: 6rem 2.5rem; }
-    .section--dark { background: var(--black); }
-    .section--mid { background: var(--charcoal); }
-
-    .inner { max-width: 1160px; margin: 0 auto; }
-
-    .eyebrow {
-      font-size: 0.66rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 0.8rem;
-    }
-
-    .heading {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
-      letter-spacing: 0.03em;
-      color: var(--white);
-      line-height: 0.95;
-      margin-bottom: 1.6rem;
-    }
-
-    .body-text {
-      color: rgba(232,224,208,0.68);
-      font-size: 1.02rem;
-      max-width: 540px;
-      line-height: 1.8;
-    }
-
-    .body-text p { margin-bottom: 1.1rem; }
-    .body-text p:last-child { margin-bottom: 0; }
-    .body-text strong { color: var(--cream); font-weight: 500; }
-
-    /* ── STORY SECTION ── */
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .story-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 6px;
-    }
-
-    .story-images img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .story-images img { aspect-ratio: 4/3; }
-    .story-images img:first-child { grid-column: 1 / -1; aspect-ratio: 16/9; }
-
-    /* ── PHOTO MOSAIC ── */
-    .mosaic {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 6px;
-    }
-
-    .mosaic img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .mosaic img:first-child {
-      grid-row: 1 / 3;
-      aspect-ratio: 3/4;
-    }
-
-    .mosaic img:not(:first-child) {
-      aspect-ratio: 4/3;
-    }
-
-    /* ── HORIZONTAL SCROLL STRIP ── */
-    .strip-wrap { overflow: hidden; }
-
-    .strip {
-      display: flex;
-      gap: 6px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .strip::-webkit-scrollbar { display: none; }
-
-    .strip img {
-      height: 320px;
-      width: auto;
-      flex-shrink: 0;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.8);
-      transition: filter 0.3s;
-    }
-
-    .strip img:hover { filter: brightness(1); }
-
-    /* ── WHAT WE DO ── */
-    .what-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      margin-top: 3.5rem;
-    }
-
-    .what-card {
-      background: var(--charcoal);
-      padding: 2.5rem 2rem;
-    }
-
-    .what-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 4rem;
-      color: var(--rust-light);
-      opacity: 0.92;
-      line-height: 1;
-      margin-bottom: 0.8rem;
-    }
-
-    .what-card h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.7rem;
-      letter-spacing: 0.05em;
-      color: var(--white);
-      margin-bottom: 0.8rem;
-    }
-
-    .what-card p {
-      font-size: 0.88rem;
-      color: rgba(232,224,208,0.58);
-      line-height: 1.7;
-    }
-
-    /* ── PROJECTS / IN THE WORKSHOP ── */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      margin-top: 3rem;
-    }
-
-    .project-card {
-      background: var(--charcoal);
-      min-height: 250px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-status {
-      font-size: 0.62rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 1rem;
-    }
-
-    .project-card h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 0.05em;
-      color: var(--white);
-      margin-bottom: 0.8rem;
-    }
-
-    .project-card p {
-      color: rgba(232,224,208,0.6);
-      font-size: 0.9rem;
-      line-height: 1.7;
-    }
-
-    .project-note {
-      margin-top: 1.5rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--muted);
-      font-size: 0.76rem;
-    }
-
-    /* ── STOCK ── */
-    .stock-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      margin-top: 3rem;
-    }
-
-    .bike-card {
-      background: var(--charcoal);
-      overflow: hidden;
-    }
-
-    .bike-card-imgwrap {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .bike-card-imgwrap img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .bike-card:hover .bike-card-imgwrap img {
-      transform: scale(1.05);
-    }
-
-    .bike-badge {
-      position: absolute;
-      top: 1rem; left: 1rem;
-      background: var(--rust);
-      color: white;
-      font-size: 0.62rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.28rem 0.65rem;
-      font-weight: 600;
-    }
-
-    .bike-body { padding: 1.5rem; }
-
-    .bike-body h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      color: var(--white);
-      margin-bottom: 0.25rem;
-    }
-
-    .bike-meta {
-      font-size: 0.76rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-    }
-
-    .bike-price {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      color: var(--rust);
-    }
-
-    .stock-empty {
-      grid-column: 1/-1;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .stock-empty h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      color: var(--white);
-      letter-spacing: 0.06em;
-      margin-bottom: 0.8rem;
-    }
-
-    .stock-empty p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ── YOUTUBE ── */
-    .yt-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .yt-thumb {
-      position: relative;
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .yt-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.65;
-      transition: opacity 0.3s;
-    }
-
-    .yt-thumb:hover img { opacity: 0.85; }
-
-    .yt-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    }
-
-    .yt-play-btn {
-      width: 72px;
-      height: 72px;
-      background: var(--rust);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .yt-play-btn svg {
-      width: 28px;
-      height: 28px;
-      fill: white;
-      margin-left: 5px;
-    }
-
-    .yt-text .body-text { margin-bottom: 2rem; }
-
-    .yt-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--rust);
-      text-decoration: none;
-      font-size: 0.76rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border-bottom: 1px solid var(--rust);
-      padding-bottom: 2px;
-    }
-
-    .yt-brand-thumb {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at center, #272323 0%, #0a0a0a 72%);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .yt-brand-thumb .yt-brand-logo {
-      width: min(62%, 340px);
-      height: auto;
-      object-fit: contain;
-      opacity: 0.42;
-      filter: none;
-    }
-    .yt-brand-thumb:hover .yt-brand-logo { opacity: 0.58; }
-
-    .contact-brand-panel {
-      min-height: 520px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem;
-      background: radial-gradient(circle at center, #272323 0%, #0a0a0a 75%);
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .contact-brand-panel img { width: min(72%, 320px); height: auto; margin-bottom: 2rem; }
-    .contact-brand-panel p {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.12em;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
-    .contact-brand-panel span { color: var(--muted); font-size: 0.86rem; }
-
-    /* ── CONTACT ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-img {
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
-    .form-row { margin-bottom: 1.1rem; }
-
-    .form-row label {
-      display: block;
-      font-size: 0.66rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .form-row input,
-    .form-row textarea,
-    .form-row select {
-      width: 100%;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: var(--cream);
-      padding: 0.85rem 1rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 300;
-      outline: none;
-      transition: border-color 0.2s;
-      -webkit-appearance: none;
-      border-radius: 0;
-    }
-
-    .form-row input:focus,
-    .form-row textarea:focus,
-    .form-row select:focus { border-color: var(--rust); }
-
-    .form-row select option { background: #1c1b1b; }
-    .form-row textarea { height: 130px; resize: vertical; }
-
-    .form-submit {
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-
-    .form-note {
-      margin-top: 0.75rem;
-      color: var(--muted);
-      font-size: 0.72rem;
-      line-height: 1.5;
-    }
-
-    .contact-direct {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-      font-size: 0.82rem;
-    }
-
-    .contact-direct p {
-      color: var(--muted);
-      font-size: 0.66rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 0.7rem;
-    }
-
-    .contact-direct a {
-      display: block;
-      color: var(--rust);
-      text-decoration: none;
-      margin-bottom: 0.35rem;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #0a0a0a;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding: 2.5rem 2.5rem;
-    }
-
-    .footer-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-logo img { height: 46px; width: auto; }
-
-    .footer-mid {
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-social a {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-social a:hover { color: var(--rust); }
-
-    /* ── TABLET / SHORT VIEWPORTS ── */
-    @media (max-width: 1180px), (max-height: 820px) {
-      .hero {
-        height: auto;
-        min-height: 760px;
-      }
-      .hero-content {
-        padding-top: 5rem;
-        padding-bottom: 3.5rem;
-      }
-      .hero-title {
-        font-size: clamp(3.6rem, 7vw, 6.4rem);
-      }
-    }
-
-    /* ── MOBILE ── */
-    @media (max-width: 1024px) {
-      html { font-size: 17px; }
-      body { line-height: 1.7; }
-
-      nav {
-        height: 70px;
-        padding: 0 1rem;
-      }
-      .nav-logo { gap: 0.55rem; }
-      .nav-logo img { height: 48px; }
-      .nav-wordmark { display: block; }
-      .nav-links {
-        display: flex;
-        gap: 0;
-        align-items: center;
-      }
-      .nav-links li { display: none; }
-      .nav-links li:nth-child(4) { display: block; }
-      .nav-links a.nav-cta {
-        display: block;
-        padding: 0.62rem 0.72rem;
-        font-size: 0.68rem;
-        letter-spacing: 0.09em;
-        white-space: nowrap;
-      }
-
-      .hero {
-        min-height: 680px;
-        height: auto;
-        padding-top: 70px;
-      }
-      .hero-bg { background-position: center 30%; }
-      .hero-content { padding: 4.5rem 1.25rem 3.25rem; }
-      .hero-tag {
-        font-size: 0.82rem;
-        letter-spacing: 0.18em;
-        margin-bottom: 1rem;
-      }
-      .hero-title {
-        font-size: clamp(3.5rem, 17vw, 4.8rem);
-        line-height: 0.94;
-        margin-bottom: 1.35rem;
-      }
-      .hero-body {
-        font-size: 1.02rem;
-        line-height: 1.7;
-        margin-bottom: 1.8rem;
-      }
-      .hero .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 1.2rem;
-        font-size: 0.82rem;
-      }
-      .btn-ghost {
-        margin-left: 0;
-        margin-top: 0.75rem;
-      }
-
-      .section { padding: 4rem 1.25rem; }
-      .heading {
-        font-size: clamp(2.8rem, 13vw, 4rem);
-        margin-bottom: 1.35rem;
-      }
-      .eyebrow {
-        font-size: 0.78rem;
-        letter-spacing: 0.2em;
-      }
-      .body-text,
-      .body-text p {
-        font-size: 1rem;
-        line-height: 1.75;
-        color: rgba(244,239,229,0.88);
-      }
-
-      /* Brighter rust accents on mobile: still moody, no longer muddy. */
-      .what-num {
-        color: var(--rust-light) !important;
-        opacity: 0.92 !important;
-      }
-      .eyebrow,
-      .hero-tag,
-      .project-status,
-      .bike-badge {
-        color: var(--rust-text) !important;
-      }
-
-      /* Dark and moody, but comfortably readable on a phone. */
-      .section p,
-      .hero-body {
-        text-shadow: 0 0 1px rgba(0,0,0,0.2);
-      }
-      .project-card p,
-      .stock-empty p,
-      .project-note,
-      .form-note,
-      .contact-direct p,
-      .footer-mid {
-        color: rgba(244,239,229,0.82);
-      }
-      .eyebrow,
-      .project-status,
-      .bike-badge {
-        opacity: 1;
-      }
-
-      .story-grid,
-      .yt-grid,
-      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .story-images { gap: 4px; }
-
-      .mosaic { grid-template-columns: 1fr 1fr; }
-      .mosaic img:first-child { grid-row: auto; grid-column: 1/-1; aspect-ratio: 16/9; }
-
-      /* Mobile cards: force natural full-width reading columns.
-         Using block here also overrides the desktop inline 3/5-column grid declarations. */
-      .what-grid,
-      .what-grid[style] {
-        display: block !important;
-        width: 100% !important;
-        max-width: none !important;
-        background: transparent;
-      }
-      .what-card {
-        display: block;
-        width: 100% !important;
-        max-width: none !important;
-        box-sizing: border-box;
-        margin: 0 0 1px 0;
-        padding: 1.8rem 1.4rem;
-      }
-      .what-card p {
-        width: 100% !important;
-        max-width: none !important;
-        margin-left: 0;
-        margin-right: 0;
-        font-size: 1rem;
-        line-height: 1.72;
-        color: rgba(244,239,229,0.86);
-        word-break: normal;
-        overflow-wrap: normal;
-        hyphens: none;
-      }
-
-      .project-grid,
-      .stock-grid { grid-template-columns: 1fr; }
-      .project-card { padding: 1.8rem 1.4rem; }
-      .project-card p,
-      .project-note,
-      .stock-empty p {
-        font-size: 0.98rem;
-        line-height: 1.7;
-      }
-      .project-status,
-      .bike-badge { font-size: 0.76rem; }
-
-      .trust-inner { grid-template-columns: 1fr; }
-      .trust-item {
-        padding: 0.95rem 1rem;
-        font-size: 0.78rem;
-        line-height: 1.45;
-        color: rgba(244,239,229,0.88);
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-      }
-
-      .strip img { height: 200px; }
-      .contact-img { aspect-ratio: 16/9; }
-      .contact-brand-panel { min-height: 300px; padding: 2rem 1.25rem; }
-      .contact-brand-panel p { font-size: 1.7rem; }
-      .contact-brand-panel span { font-size: 1rem; }
-
-      .form-row label {
-        font-size: 0.78rem;
-        letter-spacing: 0.14em;
-      }
-      .form-row input,
-      .form-row textarea,
-      .form-row select {
-        font-size: 16px;
-        min-height: 48px;
-      }
-      .form-submit {
-        min-height: 50px;
-        font-size: 0.84rem;
-      }
-      .form-note { font-size: 0.86rem; }
-      .contact-direct { font-size: 1rem; }
-      .contact-direct p { font-size: 0.78rem; }
-
-      footer { padding: 2.5rem 1.25rem; }
-      .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
-      .footer-mid { font-size: 0.9rem; }
-      .footer-social {
-        gap: 0.9rem 1.2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .footer-social a { font-size: 0.8rem; }
-    }
-
-    @media (max-width: 390px) {
-      html { font-size: 16px; }
-      .hero-title { font-size: clamp(3.1rem, 17vw, 4.2rem); }
-      .nav-links a.nav-cta { font-size: 0.66rem; padding: 0.6rem 0.65rem; }
-    }
-  
-    /* ── PERSONAL BIKE HISTORY STRIP ── */
-    .history-strip {
-      max-width: 1160px;
-      margin: 3rem auto 0;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 6px;
-    }
-
-    .history-strip img {
-      width: 100%;
-      height: 220px;
-      display: block;
-      object-fit: cover;
-      filter: brightness(0.82);
-      transition: filter 0.25s ease, transform 0.25s ease;
-    }
-
-    .history-strip img:hover {
-      filter: brightness(1);
-    }
-
-    @media (max-width: 768px) {
-      .history-strip {
-        display: flex;
-        overflow-x: auto;
-        gap: 6px;
-        margin-top: 2rem;
-        padding-bottom: 0.35rem;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-      }
-      .history-strip::-webkit-scrollbar { display: none; }
-      .history-strip img {
-        width: 78vw;
-        max-width: 330px;
-        height: 230px;
-        flex: 0 0 auto;
-      }
-    }
-
-  
-    /* ── PERSONAL BIKE COLLAGE ── */
-    .history-collage {
-      max-width: 1160px;
-      margin: 3rem auto 0;
-      overflow: hidden;
-    }
-
-    .history-collage img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      .history-collage {
-        margin-top: 2rem;
-      }
-    }
-
-  
-    /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
-    .form-grid-two { display:grid; grid-template-columns:1fr 1fr; gap:0 1rem; }
-    .form-error { margin:.5rem 0 1rem; padding:.8rem 1rem; border:1px solid var(--rust-light); color:var(--cream); background:rgba(224,90,54,.08); font-size:.85rem; }
-    input[type="file"] { width:100%; color:rgba(232,224,208,.75); font:inherit; font-size:.85rem; }
-    input[type="file"]::file-selector-button { background:transparent; color:var(--cream); border:1px solid rgba(232,224,208,.28); padding:.7rem .9rem; margin-right:.8rem; cursor:pointer; }
-    .stock-card-link { color:inherit; text-decoration:none; display:block; height:100%; }
-    .stock-card-meta { display:flex; flex-wrap:wrap; gap:.55rem 1rem; color:rgba(232,224,208,.62); font-size:.78rem; margin:.7rem 0; }
-    .stock-card-price { font-family:'Bebas Neue',sans-serif; color:var(--white); font-size:1.8rem; letter-spacing:.04em; }
-    .stock-card-status { display:inline-block; font-size:.6rem; letter-spacing:.15em; text-transform:uppercase; color:var(--rust-light); border:1px solid var(--rust-light); padding:.25rem .5rem; margin-bottom:.9rem; }
-    .review-quote { font-size:1rem!important; color:rgba(232,224,208,.78)!important; }
-    @media (max-width:768px){ .form-grid-two{grid-template-columns:1fr;} }
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revival Moto Co — Motorcycle Recommissioning & Sales, Shropshire</title>
+<meta name="description" content="Revival Moto Co finds interesting motorcycles, recommissions them with care and sells them honestly. Shropshire.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#111010;--mid:#1c1b1b;--rust:#c64a2d;--rust2:#e05a36;--cream:#e8e0d0;--muted:#8d8881;--white:#fff}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:Inter,sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+img{max-width:100%}
+nav{position:fixed;inset:0 0 auto;z-index:20;height:84px;padding:0 3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(17,16,16,.96);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--cream)}
+.nav-logo img{width:auto;height:68px;display:block}
+.nav-wordmark{display:none;font:1.35rem/.85 "Bebas Neue",sans-serif;letter-spacing:.08em}
+.nav-links{display:flex;gap:2.4rem;align-items:center;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}
+.nav-links .cta{border:1px solid var(--rust2);padding:.65rem 1rem;color:var(--white)}
+.hero{min-height:760px;height:100svh;padding-top:84px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("bsa-workshop.png") center 35%/cover no-repeat;filter:brightness(.46)}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(to top,#111010 2%,rgba(17,16,16,.62) 48%,rgba(17,16,16,.18) 100%)}
+.hero-content{position:relative;z-index:2;max-width:780px;padding:3rem 3rem 5rem}
+.hero-title,.heading{font-family:"Bebas Neue",sans-serif;color:#fff;letter-spacing:.02em;line-height:.93}
+.hero-title{font-size:clamp(4rem,7.4vw,7.4rem);margin-bottom:1.5rem;text-shadow:0 3px 18px rgba(0,0,0,.55)}
+.hero-body{max-width:500px;color:rgba(232,224,208,.82);font-size:1.05rem}
+.btn{display:inline-block;margin-top:1.8rem;padding:.9rem 2rem;background:var(--rust);color:#fff;text-decoration:none;border:0;font:600 .74rem Inter,sans-serif;text-transform:uppercase;letter-spacing:.15em;cursor:pointer}
+.btn.ghost{margin-left:.8rem;background:transparent;border:1px solid rgba(232,224,208,.32)}
+.trust{background:#0a0a0a;border-block:1px solid rgba(255,255,255,.05)}
+.trust-inner{max-width:1160px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.trust div div{padding:1.05rem;text-align:center;text-transform:uppercase;letter-spacing:.12em;font-size:.68rem;color:rgba(232,224,208,.72);border-right:1px solid rgba(255,255,255,.05)}
+.section{padding:6rem 2.5rem}.dark{background:var(--black)}.mid{background:var(--mid)}
+.inner{max-width:1160px;margin:auto}.eyebrow{color:var(--rust2);text-transform:uppercase;letter-spacing:.28em;font-size:.67rem;margin-bottom:.8rem}
+.heading{font-size:clamp(2.8rem,5vw,4.8rem);margin-bottom:1.6rem}
+.body{max-width:720px;color:rgba(232,224,208,.72);font-size:1rem}.body p{margin-bottom:1.15rem}.body strong{color:var(--cream);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.story-images{display:grid;grid-template-columns:1fr 1fr;gap:6px}.story-images img{width:100%;aspect-ratio:4/3;object-fit:cover}.story-images img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);margin-top:3rem}
+.card{background:var(--mid);padding:2rem;min-width:0}.card .status{color:var(--rust2);text-transform:uppercase;letter-spacing:.16em;font-size:.64rem;margin-bottom:1rem}
+.card h3{font:2rem "Bebas Neue",sans-serif;color:#fff;letter-spacing:.05em;margin-bottom:.7rem}.card p{color:rgba(232,224,208,.67);font-size:.9rem}
+.history-collage{max-width:1160px;margin:3rem auto 0;overflow:hidden}.history-collage img{width:100%;height:auto;display:block}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.05);margin-top:3rem}
+.step{background:var(--mid);padding:2rem 1.5rem}.num{font:4rem "Bebas Neue",sans-serif;color:var(--rust2);line-height:1}.step h3{font:1.7rem "Bebas Neue",sans-serif;color:#fff;letter-spacing:.05em}.step p{font-size:.88rem;color:rgba(232,224,208,.67)}
+.stock-empty{margin-top:3rem;border:1px solid var(--rust2);padding:3rem 2rem;text-align:center}.stock-empty h3{font:2.5rem "Bebas Neue",sans-serif;color:#fff}
+.brand-panel{min-height:460px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#292424 0%,#090909 74%);border:1px solid rgba(255,255,255,.06);padding:2rem}
+.brand-panel img{width:min(76%,390px);height:auto;margin-bottom:1.5rem}.brand-panel p{font:1.7rem "Bebas Neue",sans-serif;letter-spacing:.12em}
+.form-row{margin-bottom:1rem}.form-row label{display:block;color:var(--muted);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.4rem}
+.form-row input,.form-row select,.form-row textarea{width:100%;min-height:48px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:var(--cream);padding:.8rem 1rem;font:16px Inter,sans-serif}.form-row textarea{height:130px;resize:vertical}.form-row option{background:#1c1b1b}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}.note{font-size:.78rem;color:var(--muted)}
+.direct{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.08)}.direct a{display:block;color:var(--rust2);text-decoration:none}
+footer{background:#080808;border-top:1px solid rgba(255,255,255,.06);padding:2.8rem 2.5rem}.footer{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:2rem}.footer img{height:82px;width:auto}.footer-mid{text-align:center;color:var(--muted);font-size:.75rem}.social a{color:var(--muted);text-decoration:none;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin-left:1rem}
+@media(max-width:1024px){
+ nav{height:92px;padding:0 1rem}.nav-logo img{height:70px}.nav-wordmark{display:block}.nav-links li{display:none}.nav-links li.sell{display:block}.nav-links{gap:0}.nav-links .cta{font-size:.67rem;padding:.65rem .72rem;white-space:nowrap}
+ .hero{height:auto;min-height:720px;padding-top:92px;align-items:flex-end}.hero-bg{background-position:64% 30%}.hero-content{padding:5rem 1.25rem 3.5rem;max-width:620px}.hero-title{font-size:clamp(3.55rem,15vw,5rem);max-width:7ch}.hero-body{font-size:1rem;line-height:1.75;max-width:36ch}
+ .btn{display:block;width:100%;text-align:center}.btn.ghost{margin-left:0;margin-top:.75rem}
+ .section{padding:4rem 1.25rem}.two{grid-template-columns:1fr;gap:2.5rem}.cards,.steps{display:block;background:transparent}.card,.step{margin-bottom:1px;padding:1.8rem 1.4rem}.trust-inner{grid-template-columns:1fr}.trust div div{border-right:0;border-bottom:1px solid rgba(255,255,255,.07);font-size:.77rem}
+ .heading{font-size:clamp(2.8rem,12vw,4rem)}.body,.card p,.step p{font-size:1rem;line-height:1.75;color:rgba(240,234,222,.86)}
+ .history-collage{margin-top:2rem}.form-two{grid-template-columns:1fr}.brand-panel{min-height:300px}.brand-panel img{width:min(78%,330px)}
+ footer{padding:2.5rem 1.25rem}.footer{flex-direction:column;text-align:center}.footer img{height:92px}.social a{margin:0 .5rem}.footer-mid{font-size:.88rem}
+}
+@media(max-width:430px){
+ nav{height:88px}.nav-logo img{height:62px}.nav-wordmark{font-size:1.2rem}.hero{padding-top:88px}.hero-content{padding-inline:1.15rem}.hero-title{font-size:clamp(3.25rem,16vw,4.45rem)}
+}
 </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" aria-label="Revival Moto Co home">
-    <img src="logo.png" alt="Revival Moto Co">
-    <span class="nav-wordmark">Revival<br>Moto Co</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#services">How It Works</a></li>
-    <li><a href="#stock">For Sale</a></li>
-    <li><a href="#sell" class="nav-cta">Sell Your Bike</a></li>
-    <li><a href="#watch">Watch</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+ <a href="#" class="nav-logo"><img src="logo.png" alt="Revival Moto Co"><span class="nav-wordmark">Revival<br>Moto Co</span></a>
+ <ul class="nav-links"><li><a href="#story">Our Story</a></li><li><a href="#services">How It Works</a></li><li><a href="#stock">For Sale</a></li><li class="sell"><a class="cta" href="#sell">Sell Your Bike</a></li><li><a href="#watch">Watch</a></li><li><a href="#contact">Contact</a></li></ul>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg" id="hero-bg"></div>
-  <div class="hero-fade"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">We Find It.<br>We Fix It.<br>You Get To<br>Ride It.</h1>
-    <p class="hero-body">We find motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then we sort them out and sell them honestly. That's it, really.</p>
-    <a href="#stock" class="btn">See What's For Sale</a>
-    <a href="#story" class="btn btn-ghost">Our Story</a>
+<section class="hero"><div class="hero-bg"></div><div class="hero-fade"></div><div class="hero-content">
+ <h1 class="hero-title">We Find It.<br>We Fix It.<br>You Get To<br>Ride It.</h1>
+ <p class="hero-body">Revival Moto Co finds motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then they get sorted out and sold honestly. That's it, really.</p>
+ <a href="#stock" class="btn">See What's For Sale</a><a href="#story" class="btn ghost">Our Story</a>
+</div></section>
+
+<div class="trust"><div class="trust-inner"><div>Shropshire Based</div><div>Independent Business</div><div>Written Warranty on Retail Bikes</div><div>Part Exchange Considered</div><div>Viewings By Appointment</div></div></div>
+
+<section class="section dark" id="story"><div class="inner"><div class="two">
+ <div class="story-images"><img src="workshop-full.jpg" alt="Revival Moto Co premises"><img src="workshop-lounge.jpg" alt="Revival Moto Co showroom"></div>
+ <div><p class="eyebrow">Our Story</p><h2 class="heading">A Lifelong<br>Obsession.<br>A Proper Place For It.</h2><div class="body">
+  <p>Revival Moto Co grew out of Conrad's lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs — and the idea that interesting motorcycles deserve proper attention.</p>
+  <p>RMC is a small independent business, not a faceless motorcycle dealership. The aim is simple: understand each bike, do the work it needs and offer the sort of buying experience a motorcycle enthusiast would want.</p>
+  <p><strong>No fakery. No shortcuts.</strong> Just used motorcycles, good work and a belief that their next chapter matters as much as the last one.</p>
+ </div></div>
+</div></div></section>
+
+<section class="section dark" id="projects"><div class="inner">
+ <p class="eyebrow">Incoming &amp; In Progress</p><h2 class="heading">What's Happening</h2>
+ <p class="body">Bikes can appear here from the moment they are bought. Follow what's incoming, what's being inspected and recommissioned, and what's getting close to being ready for its next owner.</p>
+ <div class="cards">
+  <article class="card"><div class="status">Incoming</div><h3>Suzuki TL1000R</h3><p>RMC's yellow TL1000R has been bought and is on its way to Revival Moto Co. Once it arrives, it will be inspected properly before recommissioning begins.</p></article>
+  <article class="card"><div class="status">Premises</div><h3>RMC Taking Shape</h3><p>The premises are being fitted out while the first motorcycles are sourced and prepared.</p></article>
+  <article class="card"><div class="status">Next Stage</div><h3>Ready When It's Ready</h3><p>Retail motorcycles move into Current Stock only when the inspection, recommissioning and final checks are complete.</p></article>
+ </div>
+ <div class="history-collage"><img src="rmc-bike-collage-v2.jpg" alt="Motorcycles from Conrad's years of riding and ownership" loading="lazy"></div>
+</div></section>
+
+<section class="section mid" id="services"><div class="inner">
+ <p class="eyebrow">How It Works</p><h2 class="heading">How Revival Works</h2>
+ <div class="steps">
+  <div class="step"><div class="num">01</div><h3>Find</h3><p>RMC sources interesting motorcycles through private sellers, word of mouth and specialist auctions. No salvage stock. No Cat N hiding behind a fresh tin of Hammerite.</p></div>
+  <div class="step"><div class="num">02</div><h3>Inspect</h3><p>Each bike gets a thorough inspection. What turns up gets documented — the good, the bad, and the things that make you say words you wouldn't use in front of your nan.</p></div>
+  <div class="step"><div class="num">03</div><h3>Recommission</h3><p>Each motorcycle gets what it needs. The point isn't to make it into something it isn't — it's to make it right for what it is.</p></div>
+  <div class="step"><div class="num">04</div><h3>Ride &amp; Test</h3><p>Every bike gets ridden before it goes anywhere near a for-sale advert. If something reveals itself on the road, it gets dealt with.</p></div>
+  <div class="step"><div class="num">05</div><h3>Sell Honestly</h3><p>The buyer gets the full picture — what was found, what was done, and what was deliberately left alone and why.</p></div>
+ </div>
+</div></section>
+
+<section class="section dark" id="stock"><div class="inner">
+ <p class="eyebrow">Available Now</p><h2 class="heading">Current Stock</h2>
+ <div class="stock-empty"><p class="eyebrow">Coming Soon</p><h3>First Motorcycles Incoming</h3><p class="body" style="margin:1rem auto 0;max-width:520px">The first RMC motorcycles are being lined up now. They will appear here only when they are properly ready.</p><a href="#contact" class="btn">Tell Me When A Bike Is Ready</a></div>
+</div></section>
+
+<section class="section mid" id="difference"><div class="inner">
+ <p class="eyebrow">The RMC Difference</p><h2 class="heading">Buying A Used Motorcycle<br>Shouldn't Be A Leap Of Faith</h2>
+ <div class="body"><p>Used motorcycles have history. That's part of the appeal. The problem is when you don't know what that history has left behind.</p><p>RMC isn't trying to turn a 25-year-old motorcycle into a new one. The aim is to offer interesting bikes whose condition is understood — and be straight about exactly what you're buying.</p><p><strong>No cosmetic theatre covering mechanical neglect.</strong> No pretending a motorcycle is something it isn't.</p></div>
+</div></section>
+
+<section class="section dark" id="warranty"><div class="inner">
+ <p class="eyebrow">Warranty</p><h2 class="heading">Written Warranty<br>On Retail Bikes</h2>
+ <div class="body"><p>Every RMC retail motorcycle is supplied with a written warranty. The exact warranty supplied with each motorcycle will be clearly stated in its advert and sales documents.</p></div>
+</div></section>
+
+<section class="section mid" id="watch"><div class="inner"><div class="two">
+ <div class="brand-panel"><img src="logo.png" alt="Revival Moto Co"><p>Revival Moto Co</p></div>
+ <div><p class="eyebrow">On YouTube</p><h2 class="heading">Watch It Happen</h2><div class="body"><p>Follow the motorcycles from arrival through inspection, recommissioning, road testing and the occasional wrong turn.</p></div><a href="https://www.youtube.com/@RevivalMotoCo" class="btn">YouTube</a></div>
+</div></div></section>
+
+<section class="section mid" id="sell"><div class="inner"><div class="two">
+ <div><p class="eyebrow">Sell Your Bike</p><h2 class="heading">Got One<br>RMC Should<br>Know About?</h2><div class="body"><p>RMC is always looking for interesting motorcycles to buy — bikes with character, potential and a story worth continuing.</p><p>Within 50 miles is ideal, but the right bike is worth travelling for.</p></div></div>
+ <form id="sell-form" action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="_subject" value="New motorcycle offered to Revival Moto Co"><input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" style="display:none">
+  <div class="form-two">
+   <div class="form-row"><label>Seller's Name</label><input name="Seller name" required></div><div class="form-row"><label>Email</label><input type="email" name="email" required></div>
+   <div class="form-row"><label>Telephone Number</label><input type="tel" name="Telephone" required></div><div class="form-row"><label>Postcode / Location</label><input name="Postcode or location" required></div>
+   <div class="form-row"><label>Make &amp; Model</label><input name="Motorcycle make and model" required></div><div class="form-row"><label>Year</label><input type="number" name="Year" required></div>
+   <div class="form-row"><label>Registration</label><input name="Registration number" required></div><div class="form-row"><label>Recorded Mileage</label><input type="number" name="Recorded mileage" required></div>
+   <div class="form-row"><label>Number Of Owners, If Known</label><input type="number" name="Number of owners"></div><div class="form-row"><label>V5C Position</label><select name="V5C position" required><option value="">Select...</option><option>V5C in my name</option><option>V5C present, not in my name</option><option>V5C missing</option><option>Other / unsure</option></select></div>
   </div>
-</section>
+  <div class="form-row"><label>Service / History Information</label><textarea name="Service and history information"></textarea></div>
+  <div class="form-row"><label>Does It Start, Run &amp; Ride?</label><select name="Starts runs and rides" required><option value="">Select...</option><option>Starts, runs and rides</option><option>Starts and runs but does not ride</option><option>Turns over but does not start</option><option>Does not currently run</option><option>Other / unsure</option></select></div>
+  <div class="form-row"><label>Known Mechanical &amp; Cosmetic Faults</label><textarea name="Known mechanical and cosmetic faults"></textarea></div>
+  <div class="form-row"><label>Asking Price</label><input name="Asking price" placeholder="£"></div><div class="form-row"><label>Additional Information</label><textarea name="Additional information"></textarea></div>
+  <div class="form-row"><label>Photographs — Up To 10</label><input type="file" name="Motorcycle photographs" accept="image/jpeg,image/png,image/webp" multiple></div>
+  <button class="btn" type="submit">Send Bike Details</button><p class="note">Submitted online to Revival Moto Co. No email app required.</p>
+ </form>
+</div></div></section>
 
-<!-- TRUST STRIP -->
-<div class="trust-strip" aria-label="Revival Moto Co promises">
-  <div class="trust-inner">
-    <div class="trust-item">Shropshire Based</div>
-    <div class="trust-item">Independent Business</div>
-    <div class="trust-item">Written Warranty on Retail Bikes</div>
-    <div class="trust-item">Part Exchange Considered</div>
-    <div class="trust-item">Viewings By Appointment</div>
-  </div>
-</div>
+<section class="section dark" id="contact"><div class="inner"><div class="two">
+ <div class="brand-panel"><img src="logo.png" alt="Revival Moto Co"><p>Revival Moto Co</p><span>Motorcycles with stories worth continuing.</span></div>
+ <div><p class="eyebrow">Get In Touch</p><h2 class="heading">Talk Motorcycles</h2>
+  <form action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST"><input type="hidden" name="_subject" value="New Revival Moto Co website enquiry"><input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html"><input type="hidden" name="_template" value="table">
+   <div class="form-row"><label>Name</label><input name="Name" required></div><div class="form-row"><label>Email</label><input type="email" name="email" required></div><div class="form-row"><label>Telephone</label><input type="tel" name="Telephone" required></div>
+   <div class="form-row"><label>What's it about?</label><select name="Subject" required><option value="">Select...</option><option>A bike I'm looking for</option><option>A bike currently in stock</option><option>Workshop / recommissioning enquiry</option><option>General enquiry</option></select></div>
+   <div class="form-row"><label>Message</label><textarea name="Message" required></textarea></div><button class="btn" type="submit">Send Message</button>
+  </form>
+  <div class="direct"><a href="mailto:info@revivalmotoco.co.uk">info@revivalmotoco.co.uk</a></div>
+ </div>
+</div></div></section>
 
-<!-- STORY -->
-<section class="section section--dark" id="story">
-  <div class="inner">
-    <div class="story-grid">
-      <div class="story-images">
-        <img src="workshop-full.jpg" alt="The Revival Moto Co workshop">
-        <img src="workshop-lounge.jpg" alt="Workshop showroom">
-      </div>
-      <div>
-        <p class="eyebrow">Our Story</p>
-        <h2 class="heading">A Lifelong<br>Obsession.<br>A Proper Workshop.</h2>
-        <div class="body-text">
-          <p>Revival Moto Co grew out of Conrad's lifelong obsession with motorcycles — from BSAs and Moto Guzzis to Aprilias and KTMs — and the idea that interesting motorcycles deserve proper workshop time.</p>
-          <p>RMC is a small independent business, not a faceless motorcycle dealership. The aim is simple: understand each bike, do the work it needs and offer the sort of buying experience a motorcycle enthusiast would want.</p>
-          <p><strong>No fakery. No shortcuts.</strong> Just used motorcycles, good work and a belief that their next chapter matters as much as the last one.</p>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="section mid" id="visit"><div class="inner"><p class="eyebrow">Visit / Contact</p><h2 class="heading">Come And Talk Motorcycles</h2>
+ <div class="cards"><div class="card"><h3>Location</h3><p>Aston Munslow, Shropshire. Visits by arrangement.</p></div><div class="card"><h3>Opening Hours</h3><p>Monday–Friday 08:00–16:30<br>Saturday 08:00–12:30</p></div><div class="card"><h3>Contact</h3><p>info@revivalmotoco.co.uk<br>Motorcycle collection and delivery can be arranged.</p></div></div>
+</div></section>
 
-<!-- INCOMING & IN PROGRESS -->
-<section class="section section--dark" id="projects">
-  <div class="inner">
-    <p class="eyebrow">Incoming &amp; In Progress</p>
-    <h2 class="heading">What's<br>Happening</h2>
-    <p class="body-text">Bikes can appear here from the moment they are bought. Follow what's incoming, what's being inspected and recommissioned, and what's getting close to being ready for its next owner.</p>
-    <div class="project-grid">
-      <div class="project-card">
-        <div>
-          <div class="project-status">Incoming</div>
-          <h3>Suzuki TL1000R</h3>
-          <p>RMC's yellow TL1000R has been bought and is on its way to Revival Moto Co. Once it arrives, it will be inspected properly before recommissioning begins.</p>
-        </div>
-        <div class="project-note">Genuine photographs and workshop updates will be added as the work progresses.</div>
-      </div>
-      <div class="project-card">
-        <div>
-          <div class="project-status">Recommissioning</div>
-          <h3>Workshop Taking Shape</h3>
-          <p>The RMC workshop is being fitted out while the first motorcycles are inspected and prepared.</p>
-        </div>
-        <div class="project-note">Follow the workshop and the motorcycles on YouTube and social.</div>
-      </div>
-      <div class="project-card">
-        <div>
-          <div class="project-status">Road Test</div>
-          <h3>Nearly Ready</h3>
-          <p>The last jobs are often the little ones. This is where a bike gets its final fettling before it moves into Current Stock.</p>
-        </div>
-        <div class="project-note">Retail bikes will move from here into Current Stock.</div>
-      </div>
-    </div>
-  </div>
-    <div class="history-collage">
-      <img src="rmc-bike-collage-v2.jpg" alt="A selection of motorcycles from Conrad's years of riding and ownership" loading="lazy">
-    </div>
+<footer><div class="footer"><img src="logo.png" alt="Revival Moto Co"><div class="footer-mid">Shropshire<br>info@revivalmotoco.co.uk<br><a href="privacy.html" style="color:inherit">Privacy</a></div><div class="social"><a href="https://www.youtube.com/@RevivalMotoCo">YouTube</a><a href="https://www.instagram.com/RevivalMotoCo">Instagram</a></div></div></footer>
 
-</section>
-
-<!-- HOW REVIVAL WORKS -->
-<section class="section section--mid" id="services">
-  <div class="inner">
-    <p class="eyebrow">How It Works</p>
-    <h2 class="heading">How Revival<br>Works</h2>
-    <div class="what-grid" style="grid-template-columns: repeat(5,1fr);">
-      <div class="what-card">
-        <div class="what-num">01</div>
-        <h3>Find</h3>
-        <p>We source interesting motorcycles through private sellers, word of mouth and specialist auctions. No salvage stock. No Cat N hiding behind a fresh tin of Hammerite.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">02</div>
-        <h3>Inspect</h3>
-        <p>Each bike gets a thorough inspection. We document what we find — the good, the bad, and the things that make you say words you wouldn't use in front of your nan.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">03</div>
-        <h3>Recommission</h3>
-        <p>We address what needs attention and recommission each bike according to what it needs. We don't try to make a bike into something it isn't — just make it right for what it is.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">04</div>
-        <h3>Ride & Test</h3>
-        <p>Every bike gets ridden before it goes anywhere near a for-sale ad. If something reveals itself on the road, we deal with it.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">05</div>
-        <h3>Sell Honestly</h3>
-        <p>You get the full picture — what we found, what we did, and what we chose to leave alone and why. We tell you before you buy.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- STOCK -->
-<section class="section section--dark" id="stock">
-  <div class="inner">
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0;">
-      <div>
-        <p class="eyebrow">Available Now</p>
-        <h2 class="heading">Current Stock</h2>
-      </div>
-      <p style="color:var(--muted); font-size:0.82rem;">Updated as bikes land and leave</p>
-    </div>
-    <div class="stock-grid">
-      <div class="stock-empty" id="stock-empty">
-        <div style="border: 1px solid var(--rust-light); padding: 3rem 2rem; max-width: 500px; margin: 0 auto;">
-          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust); margin-bottom:1rem;">Coming Soon</p>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.8rem;">First Builds Incoming</h3>
-          <p style="color:var(--muted); font-size:0.88rem; margin-bottom:2rem;">We're being annoyingly thorough with the first ones. Follow them in the workshop and on YouTube — they go on sale only when they're properly ready.</p>
-          <a href="#contact" class="btn">Tell Me When A Bike Is Ready</a>
-        </div>
-      </div>
-</div>
-  </div>
-</section>
-
-<!-- SOLD ARCHIVE — hidden until a real sold motorcycle exists -->
-<section class="section section--dark" id="sold-archive" hidden>
-  <div class="inner">
-    <p class="eyebrow">Previously Sold</p>
-    <h2 class="heading">Sold Motorcycles</h2>
-    <div class="stock-grid" id="sold-grid"></div>
-  </div>
-</section>
-
-<!-- CUSTOMER REVIEWS — hidden until a genuine permitted review exists -->
-<section class="section section--mid" id="reviews" hidden>
-  <div class="inner">
-    <p class="eyebrow">Customer Reviews</p>
-    <h2 class="heading">What Buyers Say</h2>
-    <div class="project-grid" id="review-grid"></div>
-  </div>
-</section>
-
-<!-- RMC DIFFERENCE -->
-<section class="section section--mid" id="difference">
-  <div class="inner">
-    <p class="eyebrow">The RMC Difference</p>
-    <h2 class="heading">Buying A Used Motorcycle<br>Shouldn't Be A Leap Of Faith</h2>
-    <div class="body-text" style="max-width:760px;">
-      <p>Used motorcycles have history. That's part of the appeal. The problem is when you don't know what that history has left behind.</p>
-      <p>RMC isn't trying to turn a 25-year-old motorcycle into a new one. The aim is to offer interesting bikes whose condition is understood — and be straight about exactly what you're buying.</p>
-      <p><strong>No cosmetic theatre covering mechanical neglect.</strong> No pretending a motorcycle is something it isn't.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WARRANTY INFORMATION -->
-<section class="section section--dark" id="warranty">
-  <div class="inner">
-    <p class="eyebrow">Warranty Information</p>
-    <h2 class="heading">Written Warranty<br>On Retail Bikes</h2>
-    <div class="body-text" style="max-width:820px;">
-      <p>Every RMC retail motorcycle is supplied with a written warranty.</p>
-      <p>The exact warranty supplied with each motorcycle will be clearly stated in its advert and sales documents, so the cover is clear before purchase. Any warranty supplied is additional to, and does not affect, statutory rights.</p>
-    </div>
-  </div>
-</section>
-
-<!-- YOUTUBE -->
-<section class="section section--mid" id="watch">
-  <div class="inner">
-    <div class="yt-grid">
-      <div class="yt-thumb yt-brand-thumb" aria-label="Watch Revival Moto Co on YouTube">
-        <img src="logo.png" alt="Revival Moto Co" class="yt-brand-logo">
-        <div class="yt-play">
-          <div class="yt-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="yt-text">
-        <p class="eyebrow">On YouTube</p>
-        <h2 class="heading">Watch It<br>Happen</h2>
-        <div class="body-text">
-          <p>We film the bikes and the workshop as it happens — finds, fixes, road tests, wrong turns and the moments where something comes apart that definitely wasn't supposed to.</p>
-          <p>Subscribe for the bikes, the work and the occasional creative swearing.</p>
-        </div>
-        <div style="border: 1px solid var(--rust-light); display:inline-block; padding: 0.5rem 1.2rem; margin: 1.2rem 0;">
-          <span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust);">Channel Launching Soon</span>
-        </div>
-        <br>
-        <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank" class="yt-link">Subscribe on YouTube →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SELL YOUR BIKE -->
-<section class="section section--mid" id="sell">
-  <div class="inner">
-    <div class="contact-grid">
-      <div>
-        <p class="eyebrow">Sell Your Bike</p>
-        <h2 class="heading">Got One<br>We Should<br>Know About?</h2>
-        <div class="body-text">
-          <p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
-          <p>We'll consider anything with <strong>character, potential and a story worth continuing</strong>. If you think it's interesting, tell us about it.</p>
-          <p><strong>Within 50 miles of the workshop is ideal</strong>, but RMC will travel for the right bike.</p>
-          <p style="color:var(--muted); font-size:0.85rem;">We'll need a V5 in the seller's name and the bike needs to be complete — not crashed or written off.</p>
-        </div>
-      </div>
-      <div>
-        <form id="sell-form" action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New motorcycle offered to Revival Moto Co">
-          <input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_url" value="https://revivalmotoco.co.uk/#sell">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="form-grid-two">
-            <div class="form-row"><label for="seller-name">Seller's Name</label><input id="seller-name" type="text" name="Seller name" required autocomplete="name"></div>
-            <div class="form-row"><label for="seller-email">Email Address</label><input id="seller-email" type="email" name="email" required autocomplete="email"></div>
-            <div class="form-row"><label for="seller-phone">Telephone Number</label><input id="seller-phone" type="tel" name="Telephone" required autocomplete="tel"></div>
-            <div class="form-row"><label for="seller-location">Postcode / Location</label><input id="seller-location" type="text" name="Postcode or location" required autocomplete="postal-code"></div>
-            <div class="form-row"><label for="bike-make-model">Motorcycle Make &amp; Model</label><input id="bike-make-model" type="text" name="Motorcycle make and model" required></div>
-            <div class="form-row"><label for="bike-year">Year</label><input id="bike-year" type="number" name="Year" min="1900" max="2100" required></div>
-            <div class="form-row"><label for="bike-reg">Registration Number</label><input id="bike-reg" type="text" name="Registration number" required></div>
-            <div class="form-row"><label for="bike-mileage">Recorded Mileage</label><input id="bike-mileage" type="number" name="Recorded mileage" min="0" required></div>
-            <div class="form-row"><label for="bike-owners">Number Of Owners, If Known</label><input id="bike-owners" type="number" name="Number of owners" min="0"></div>
-            <div class="form-row"><label for="v5c">V5C Position</label><select id="v5c" name="V5C position" required><option value="">Select...</option><option>V5C in my name</option><option>V5C present, not in my name</option><option>V5C missing</option><option>Other / unsure</option></select></div>
-          </div>
-          <div class="form-row"><label for="history">Service / History Information</label><textarea id="history" name="Service and history information" required></textarea></div>
-          <div class="form-row"><label for="running">Does It Start, Run &amp; Ride?</label><select id="running" name="Starts runs and rides" required><option value="">Select...</option><option>Starts, runs and rides</option><option>Starts and runs but does not ride</option><option>Turns over but does not start</option><option>Does not currently run</option><option>Other / unsure</option></select></div>
-          <div class="form-row"><label for="faults">Known Mechanical &amp; Cosmetic Faults</label><textarea id="faults" name="Known mechanical and cosmetic faults" required></textarea></div>
-          <div class="form-row"><label for="asking-price">Asking Price</label><input id="asking-price" type="text" name="Asking price" placeholder="£"></div>
-          <div class="form-row"><label for="extra-info">Additional Information</label><textarea id="extra-info" name="Additional information"></textarea></div>
-          <div class="form-row"><label for="bike-photos">Photographs — Up To 10</label><input id="bike-photos" type="file" name="Motorcycle photographs" accept="image/jpeg,image/png,image/webp" multiple><p class="form-note">JPG, PNG or WebP. Maximum 10 photographs and 10MB total.</p></div>
-          <div id="photo-error" class="form-error" role="alert" hidden></div>
-          <button type="submit" class="btn form-submit">Send Bike Details</button>
-          <p class="form-note">Your details and photographs are submitted online to Revival Moto Co. You won't need to open an email app.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section--dark" id="contact">
-  <div class="inner">
-    <div class="contact-grid">
-      <div class="contact-brand-panel">
-        <img src="logo.png" alt="Revival Moto Co">
-        <p>Revival Moto Co</p>
-        <span>Motorcycles with stories worth continuing.</span>
-      </div>
-      <div>
-        <p class="eyebrow">Get In Touch</p>
-        <h2 class="heading">Talk<br>To Us</h2>
-        <p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a specific bike? Want to know when something lands? Any other questions — we're all ears.</p>
-
-        <form id="contact-form" action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST">
-          <input type="hidden" name="_subject" value="New Revival Moto Co website enquiry">
-          <input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_url" value="https://revivalmotoco.co.uk/#contact">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="form-row">
-          <label>Name</label>
-          <input type="text" name="Name" placeholder="Your name" required>
-        </div>
-        <div class="form-row">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-row">
-          <label>What's it about?</label>
-          <select name="Subject" required>
-            <option value="">Select...</option>
-            <option>A bike I'm looking for</option>
-            <option>A bike currently in stock</option>
-            <option>Workshop / recommissioning enquiry</option>
-            <option>General enquiry</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Message</label>
-          <textarea name="Message" placeholder="Tell us what you're after..." required></textarea>
-        </div>
-        <button type="submit" class="btn form-submit">Send Message</button>
-        <p class="form-note">Your message is submitted online to Revival Moto Co.</p>
-        </form>
-
-        <div class="contact-direct">
-          <p>Or directly</p>
-          <a href="mailto:info@revivalmotoco.co.uk">info@revivalmotoco.co.uk</a>
-          <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube — Revival Moto Co</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRACTICAL INFO -->
-<section class="section section--mid" id="visit">
-  <div class="inner">
-    <p class="eyebrow">Visit / Contact</p>
-    <h2 class="heading">Come And<br>Talk Motorcycles</h2>
-    <div class="what-grid" style="grid-template-columns: repeat(3,1fr);">
-      <div class="what-card">
-        <h3>Workshop</h3>
-        <p>Aston Munslow, Shropshire. Visits by arrangement so we can make sure someone is there and the kettle is on.</p>
-      </div>
-      <div class="what-card">
-        <h3>Opening Hours</h3>
-        <p>Monday–Friday 08:00–16:30<br>Saturday 08:00–12:30</p>
-      </div>
-      <div class="what-card">
-        <h3>Contact</h3>
-        <p><a href="mailto:info@revivalmotoco.co.uk" style="color:var(--rust); text-decoration:none;">info@revivalmotoco.co.uk</a><br>Motorcycle collection and delivery can be arranged. Ask us for a quote.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <img src="logo.png" alt="Revival Moto Co">
-    </div>
-    <div class="footer-mid">
-      Shropshire<br>
-      info@revivalmotoco.co.uk<br>
-      <a href="privacy.html" style="color:inherit;">Privacy</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/RevivalMotoCo" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@conradwebster863" target="_blank">TikTok</a>
-      <a href="https://www.facebook.com/profile.php?id=61589397403742" target="_blank">Facebook</a>
-    </div>
-  </div>
-</footer>
-
-<script src="motorcycles.js"></script>
 <script>
-  const statusLabels = { available:'Available', 'coming-soon':'Coming Soon', reserved:'Reserved', sold:'Sold' };
-  const money = n => Number.isFinite(Number(n)) ? new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(Number(n)) : n;
-  const bikeName = b => [b.year,b.make,b.model,b.derivative].filter(Boolean).join(' ');
-  const bikeUrl = b => `motorcycle.html?id=${encodeURIComponent(b.id)}`;
-  const card = b => {
-    const img=(b.images&&b.images[0])||'';
-    const mileage=b.mileage!=null?`${Number(b.mileage).toLocaleString('en-GB')} miles`:'';
-    return `<article class="bike-card"><a class="stock-card-link" href="${bikeUrl(b)}"><div class="bike-card-imgwrap">${img?`<img src="${img}" alt="${bikeName(b)}" loading="lazy">`:''}</div><div class="bike-body"><span class="stock-card-status">${statusLabels[b.status]||b.status}</span><h3>${bikeName(b)}</h3><div class="stock-card-meta"><span>${mileage}</span></div>${b.status==='sold'?'':`<div class="stock-card-price">${money(b.price)}</div>`}<p>${b.shortDescription||''}</p></div></a></article>`;
-  };
-  const bikes = window.RMC_MOTORCYCLES || [];
-  const active=bikes.filter(b=>['available','coming-soon','reserved'].includes(b.status));
-  const sold=bikes.filter(b=>b.status==='sold');
-  const stockGrid=document.querySelector('#stock .stock-grid');
-  if(stockGrid && active.length){ stockGrid.innerHTML=active.map(card).join(''); }
-  if(sold.length){ const sec=document.getElementById('sold-archive'); const grid=document.getElementById('sold-grid'); sec.hidden=false; grid.innerHTML=sold.map(card).join(''); }
-  const genuineReviews=bikes.filter(b=>b.status==='sold' && b.review && b.reviewPermission);
-  if(genuineReviews.length){ const sec=document.getElementById('reviews'); const grid=document.getElementById('review-grid'); sec.hidden=false; grid.innerHTML=genuineReviews.map(b=>`<article class="project-card"><div><div class="project-status">Verified RMC Customer</div><h3>${bikeName(b)}</h3><p class="review-quote">“${b.review}”</p></div></article>`).join(''); }
-
-  // Sell Your Bike: enforce up to ten photos and FormSubmit's 10MB total upload limit.
-  const photos=document.getElementById('bike-photos'); const photoError=document.getElementById('photo-error'); const sellForm=document.getElementById('sell-form');
-  function validatePhotos(){
-    if(!photos) return true;
-    const files=[...photos.files]; const total=files.reduce((n,f)=>n+f.size,0); const max=10*1024*1024;
-    let msg=''; if(files.length>10) msg='Please choose no more than 10 photographs.'; else if(total>max) msg='Those photographs are over 10MB in total. Please choose smaller files.';
-    if(photoError){ photoError.textContent=msg; photoError.hidden=!msg; }
-    return !msg;
-  }
-  if(photos) photos.addEventListener('change',validatePhotos);
-  if(sellForm) sellForm.addEventListener('submit',e=>{ if(!validatePhotos()){ e.preventDefault(); photos.focus(); } });
-
-  // Subtle parallax
-  const heroBg = document.getElementById('hero-bg');
-  window.addEventListener('scroll', () => { if (heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.18}px)`; }, { passive: true });
+document.getElementById('sell-form').addEventListener('submit',function(e){
+ const f=this.querySelector('input[type=file]'); if(!f||!f.files)return;
+ if(f.files.length>10){e.preventDefault();alert('Please choose no more than 10 photographs.');return}
+ let total=0; for(const x of f.files) total+=x.size;
+ if(total>10*1024*1024){e.preventDefault();alert('Please keep the total photograph upload below 10MB.')}
+});
 </script>
-
-</body>
-</html>
+</body></html>
