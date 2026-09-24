@@ -1064,6 +1064,20 @@
       .project-photo-pair img { height:auto; aspect-ratio:4/3; }
     }
 
+    .project-photo-single {
+      margin:1.2rem 0 1rem;
+    }
+    .project-photo-single img {
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+    @media (max-width:768px) {
+      .project-photo-single img { height:auto; aspect-ratio:4/3; object-fit:cover; }
+    }
+
     /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
     .form-grid-two { display:grid; grid-template-columns:1fr 1fr; gap:0 1rem; }
     .form-error { margin:.5rem 0 1rem; padding:.8rem 1rem; border:1px solid var(--rust-light); color:var(--cream); background:rgba(224,90,54,.08); font-size:.85rem; }
@@ -1159,6 +1173,17 @@
           </div>
         </div>
         <div class="project-note">Next: inspection, assessment and a proper recommissioning plan. Genuine workshop updates will follow as the work progresses.</div>
+      </div>
+      <div class="project-card">
+        <div>
+          <div class="project-status">Incoming</div>
+          <h3>Kawasaki ZX-10 Tomcat</h3>
+          <p>The ZX-10 Tomcat is the next motorcycle heading to Revival Moto Co. Bought as a recommissioning project, it will be photographed properly once it arrives at the workshop before inspection begins.</p>
+          <div class="project-photo-single">
+            <img src="zx10-tomcat-incoming.jpg" alt="Kawasaki ZX-10 Tomcat incoming to Revival Moto Co" loading="lazy">
+          </div>
+        </div>
+        <div class="project-note">Next: collection, workshop arrival, inspection and assessment before the recommissioning plan is confirmed.</div>
       </div>
       <div class="project-card">
         <div>
