@@ -1050,32 +1050,40 @@
     .project-photo-pair {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:6px;
-      margin:1.2rem 0 1rem;
+      gap:10px;
+      margin:10px 0 1rem;
     }
+    .project-photo-pair figure,
+    .project-photo-single figure { margin:0; }
     .project-photo-pair img {
       width:100%;
-      height:260px;
+      height:300px;
       object-fit:cover;
       display:block;
     }
-    @media (max-width:768px) {
-      .project-photo-pair { grid-template-columns:1fr; }
-      .project-photo-pair img { height:auto; aspect-ratio:4/3; }
-    }
-
-    .project-photo-single {
-      margin:1.2rem 0 1rem;
-    }
+    .project-photo-single { margin:1.2rem 0 10px; }
     .project-photo-single img {
       width:100%;
-      height:260px;
+      height:360px;
       object-fit:cover;
       object-position:center;
       display:block;
     }
+    .project-photo-caption {
+      margin-top:.45rem;
+      color:var(--muted);
+      font-size:.68rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
     @media (max-width:768px) {
-      .project-photo-single img { height:auto; aspect-ratio:4/3; object-fit:cover; }
+      .project-photo-pair { grid-template-columns:1fr; }
+      .project-photo-pair img,
+      .project-photo-single img {
+        height:auto;
+        aspect-ratio:4/3;
+        object-fit:cover;
+      }
     }
 
     /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
@@ -1167,12 +1175,21 @@
           <div class="project-status">In The Workshop</div>
           <h3>Suzuki TL1000R</h3>
           <p>Strip-down and assessment are underway on the yellow TL1000R. Bodywork has been removed so the chassis, running gear and components can be properly inspected before servicing, repairs and recommissioning continue.</p>
-          <div class="project-photo-pair">
-            <img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R stripped down for inspection in the Revival Moto Co workshop" loading="lazy">
-            <img src="tl1000r-workshop-2.jpg" alt="Front view of the stripped Suzuki TL1000R during workshop assessment" loading="lazy">
-          </div>
           <div class="project-photo-single">
-            <img src="tl1000r-workshop-3.jpg" alt="Suzuki TL1000R undergoing recommissioning at Revival Moto Co" loading="lazy">
+            <figure>
+              <img src="tl1000r-workshop-3.jpg" alt="Suzuki TL1000R at the start of strip-down in the Revival Moto Co workshop" loading="lazy">
+              <figcaption class="project-photo-caption">Initial strip</figcaption>
+            </figure>
+          </div>
+          <div class="project-photo-pair">
+            <figure>
+              <img src="tl1000r-workshop-2.jpg" alt="Suzuki TL1000R with bodywork removed for access and inspection" loading="lazy">
+              <figcaption class="project-photo-caption">Access and inspection</figcaption>
+            </figure>
+            <figure>
+              <img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R further stripped during workshop assessment" loading="lazy">
+              <figcaption class="project-photo-caption">Strip-down underway</figcaption>
+            </figure>
           </div>
         </div>
         <div class="project-note">Now: inspection, servicing and recommissioning. Workshop updates will follow as the bike progresses.</div>
