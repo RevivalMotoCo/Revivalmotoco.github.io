@@ -1050,40 +1050,32 @@
     .project-photo-pair {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin:10px 0 1rem;
+      gap:6px;
+      margin:1.2rem 0 1rem;
     }
-    .project-photo-pair figure,
-    .project-photo-single figure { margin:0; }
     .project-photo-pair img {
       width:100%;
-      height:300px;
+      height:260px;
       object-fit:cover;
       display:block;
     }
-    .project-photo-single { margin:1.2rem 0 10px; }
+    @media (max-width:768px) {
+      .project-photo-pair { grid-template-columns:1fr; }
+      .project-photo-pair img { height:auto; aspect-ratio:4/3; }
+    }
+
+    .project-photo-single {
+      margin:1.2rem 0 1rem;
+    }
     .project-photo-single img {
       width:100%;
-      height:360px;
+      height:260px;
       object-fit:cover;
       object-position:center;
       display:block;
     }
-    .project-photo-caption {
-      margin-top:.45rem;
-      color:var(--muted);
-      font-size:.68rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
     @media (max-width:768px) {
-      .project-photo-pair { grid-template-columns:1fr; }
-      .project-photo-pair img,
-      .project-photo-single img {
-        height:auto;
-        aspect-ratio:4/3;
-        object-fit:cover;
-      }
+      .project-photo-single img { height:auto; aspect-ratio:4/3; object-fit:cover; }
     }
 
     /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
@@ -1105,7 +1097,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo" aria-label="Revival Moto Co home">
-    <img src="logo.png" alt="Revival Moto Co">
+    <img src="rmc-logo-compact.jpg" alt="RMC">
     <span class="nav-wordmark">Revival<br>Moto Co</span>
   </a>
   <ul class="nav-links">
@@ -1175,21 +1167,12 @@
           <div class="project-status">In The Workshop</div>
           <h3>Suzuki TL1000R</h3>
           <p>Strip-down and assessment are underway on the yellow TL1000R. Bodywork has been removed so the chassis, running gear and components can be properly inspected before servicing, repairs and recommissioning continue.</p>
-          <div class="project-photo-single">
-            <figure>
-              <img src="tl1000r-workshop-3.jpg" alt="Suzuki TL1000R at the start of strip-down in the Revival Moto Co workshop" loading="lazy">
-              <figcaption class="project-photo-caption">Initial strip</figcaption>
-            </figure>
-          </div>
           <div class="project-photo-pair">
-            <figure>
-              <img src="tl1000r-workshop-2.jpg" alt="Suzuki TL1000R with bodywork removed for access and inspection" loading="lazy">
-              <figcaption class="project-photo-caption">Access and inspection</figcaption>
-            </figure>
-            <figure>
-              <img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R further stripped during workshop assessment" loading="lazy">
-              <figcaption class="project-photo-caption">Strip-down underway</figcaption>
-            </figure>
+            <img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R stripped down for inspection in the Revival Moto Co workshop" loading="lazy">
+            <img src="tl1000r-workshop-2.jpg" alt="Front view of the stripped Suzuki TL1000R during workshop assessment" loading="lazy">
+          </div>
+          <div class="project-photo-single">
+            <img src="tl1000r-workshop-3.jpg" alt="Suzuki TL1000R undergoing recommissioning at Revival Moto Co" loading="lazy">
           </div>
         </div>
         <div class="project-note">Now: inspection, servicing and recommissioning. Workshop updates will follow as the bike progresses.</div>
@@ -1334,7 +1317,7 @@
   <div class="inner">
     <div class="yt-grid">
       <div class="yt-thumb yt-brand-thumb" aria-label="Watch Revival Moto Co on YouTube">
-        <img src="logo.png" alt="Revival Moto Co" class="yt-brand-logo">
+        <img src="rmc-logo-full.jpg" alt="Revival Moto Co" class="yt-brand-logo">
         <div class="yt-play">
           <div class="yt-play-btn">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1409,7 +1392,7 @@
   <div class="inner">
     <div class="contact-grid">
       <div class="contact-brand-panel">
-        <img src="logo.png" alt="Revival Moto Co">
+        <img src="rmc-logo-full.jpg" alt="Revival Moto Co">
         <p>Revival Moto Co</p>
         <span>Motorcycles with stories worth continuing.</span>
       </div>
@@ -1486,7 +1469,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="logo.png" alt="Revival Moto Co">
+      <img src="rmc-logo-full.jpg" alt="Revival Moto Co">
     </div>
     <div class="footer-mid">
       Shropshire<br>
