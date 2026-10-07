@@ -1090,6 +1090,8 @@
     .review-quote { font-size:1rem!important; color:rgba(232,224,208,.78)!important; }
     @media (max-width:768px){ .form-grid-two{grid-template-columns:1fr;} }
 
+
+.build-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:6px;margin-top:3rem}.build-card{background:var(--charcoal);overflow:hidden;border:1px solid rgba(255,255,255,.05)}.build-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.build-card-body{padding:1.8rem}.build-card h3{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.05em;color:var(--white);margin:.35rem 0 .7rem}.build-card p{color:rgba(232,224,208,.68);font-size:.9rem;line-height:1.7;margin-bottom:1.2rem}.build-link{color:var(--rust-light);text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:600}.stock-note{border:1px solid rgba(224,90,54,.65);padding:2rem;text-align:center;margin-top:3rem}@media(max-width:768px){.build-grid{grid-template-columns:1fr}.build-card-body{padding:1.4rem}}
 </style>
 </head>
 <body>
@@ -1097,7 +1099,7 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo" aria-label="Revival Moto Co home">
-    <img src="rmc-logo-compact.jpg" alt="RMC">
+    <img src="logo.png" alt="Revival Moto Co">
     <span class="nav-wordmark">Revival<br>Moto Co</span>
   </a>
   <ul class="nav-links">
@@ -1246,28 +1248,8 @@
     </div>
   </div>
 </section>
-<!-- STOCK -->
-<section class="section section--dark" id="stock">
-  <div class="inner">
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0;">
-      <div>
-        <p class="eyebrow">Available Now</p>
-        <h2 class="heading">Current Stock</h2>
-      </div>
-      <p style="color:var(--muted); font-size:0.82rem;">Updated as bikes land and leave</p>
-    </div>
-    <div class="stock-grid">
-      <div class="stock-empty" id="stock-empty">
-        <div style="border: 1px solid var(--rust-light); padding: 3rem 2rem; max-width: 500px; margin: 0 auto;">
-          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust); margin-bottom:1rem;">In The Workshop</p>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.8rem;">Follow The Builds</h3>
-          <p style="color:var(--muted); font-size:0.88rem; margin-bottom:2rem;">The first RMC motorcycles are now in the workshop. Follow the inspection, recommissioning and testing process as we work through each bike — and see exactly what went into them before they’re offered for sale.</p>
-          <a href="#contact" class="btn">Tell Me When A Bike Is Ready</a>
-        </div>
-      </div>
-</div>
-  </div>
-</section>
+<!-- IN THE WORKSHOP / BUILD JOURNALS -->
+<section class="section section--dark" id="stock"><div class="inner"><div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem"><div><p class="eyebrow">RMC Build Journals</p><h2 class="heading">In The Workshop</h2></div><p style="color:var(--muted);font-size:.82rem">Follow them from arrival to ready for the road</p></div><p class="body-text" style="max-width:760px">These motorcycles aren't retail stock yet. Follow the inspection, recommissioning and testing as the work happens. When a bike is properly ready, it moves into For Sale.</p><div class="build-grid"><article class="build-card"><img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R stripped for inspection in the RMC workshop"><div class="build-card-body"><div class="project-status">Recommissioning Underway</div><h3>Suzuki TL1000R</h3><p>Our first RMC recommission is underway. Follow the TL from initial assessment and strip-down through servicing, repairs, reassembly, road testing and, eventually, sale.</p><a class="build-link" href="tl1000r-build.html">Follow The TL1000R Build →</a></div></article><article class="build-card"><img src="zx10-tomcat-incoming.jpg" alt="Kawasaki ZX-10 Tomcat at Revival Moto Co"><div class="build-card-body"><div class="project-status">At RMC · Assessment Next</div><h3>Kawasaki ZX-10 Tomcat</h3><p>The Tomcat is at RMC and waiting for its full workshop assessment. Its build journal will begin when work starts.</p><a class="build-link" href="#projects">See The Tomcat At RMC →</a></div></article></div><div class="stock-note"><p class="eyebrow">Looking To Buy?</p><h3 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--white)">Nothing Is For Sale Until It's Ready</h3><p style="color:var(--muted);margin:0 auto 1.4rem;max-width:560px">Want to know when one of the RMC bikes becomes available?</p><a href="#contact" class="btn">Tell Me When A Bike Is Ready</a></div></div></section>
 
 <!-- SOLD ARCHIVE — hidden until a real sold motorcycle exists -->
 <section class="section section--dark" id="sold-archive" hidden>
@@ -1317,7 +1299,7 @@
   <div class="inner">
     <div class="yt-grid">
       <div class="yt-thumb yt-brand-thumb" aria-label="Watch Revival Moto Co on YouTube">
-        <img src="rmc-logo-full.jpg" alt="Revival Moto Co" class="yt-brand-logo">
+        <img src="logo.png" alt="Revival Moto Co" class="yt-brand-logo">
         <div class="yt-play">
           <div class="yt-play-btn">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1392,7 +1374,7 @@
   <div class="inner">
     <div class="contact-grid">
       <div class="contact-brand-panel">
-        <img src="rmc-logo-full.jpg" alt="Revival Moto Co">
+        <img src="logo.png" alt="Revival Moto Co">
         <p>Revival Moto Co</p>
         <span>Motorcycles with stories worth continuing.</span>
       </div>
@@ -1469,7 +1451,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="rmc-logo-full.jpg" alt="Revival Moto Co">
+      <img src="logo.png" alt="Revival Moto Co">
     </div>
     <div class="footer-mid">
       Shropshire<br>
