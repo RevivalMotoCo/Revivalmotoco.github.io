@@ -1,17 +1,5 @@
-RMC TL1000R WEBSITE UPDATE
+RMC TL1000R progress update — 9 October 2026
 
-1. Unzip this folder.
-2. Open your GitHub repository: RevivalMotoCo/Revivalmotoco.github.io
-3. Upload ALL files inside this folder to the repository root.
-4. When GitHub warns that index.html already exists, replace/overwrite it.
-5. Commit the changes.
+Upload the files from this folder to the ROOT of your GitHub Pages repository, replacing files with the same names. GitHub does not unpack ZIP uploads automatically: unzip first, then drag the contents into Add file > Upload files.
 
-Do NOT upload this ZIP itself.
-
-This package contains:
-- replacement index.html
-- new tl1000r-build.html
-- the TL build photographs used by the page
-- the compact RMC logo used by the journal
-
-The homepage links to the TL1000R build journal.
+index.html is included as the previously prepared workshop/build-links version; it is not otherwise modified in this update. The updated journal is tl1000r-build.html. Five new photos are included. Existing site files not in this ZIP should remain untouched.
