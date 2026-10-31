@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revival Moto Co — Motorcycle Recommissioning & Sales, Aston Munslow, Shropshire</title>
-  <meta name="description" content="Revival Moto Co finds interesting motorcycles, recommissions them with care and sells them honestly. Based in Aston Munslow, Shropshire.">
-  <meta name="keywords" content="motorcycle recommissioning, classic motorcycles for sale, vintage motorcycles Shropshire, motorcycle workshop Shropshire, used motorcycles UK, barn find motorcycles">
-  <meta property="og:title" content="Revival Moto Co — Honest Motorcycles, Shropshire">
-  <meta property="og:description" content="We find neglected motorcycles, sort them out properly, and sell them honestly. Based in Aston Munslow, Shropshire.">
-  <meta property="og:image" content="https://revivalmotoco.co.uk/rmc-workshop-hero.jpg">
-  <meta property="og:url" content="https://revivalmotoco.co.uk">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Revival Moto Co — Motorcycle Recommissioning &amp; Sales, Aston Munslow, Shropshire</title>
+<meta content="Revival Moto Co finds interesting motorcycles, recommissions them with care and sells them honestly. Based in Aston Munslow, Shropshire." name="description"/>
+<meta content="motorcycle recommissioning, classic motorcycles for sale, vintage motorcycles Shropshire, motorcycle workshop Shropshire, used motorcycles UK, barn find motorcycles" name="keywords"/>
+<meta content="Revival Moto Co — Honest Motorcycles, Shropshire" property="og:title"/>
+<meta content="We find neglected motorcycles, sort them out properly, and sell them honestly. Based in Aston Munslow, Shropshire." property="og:description"/>
+<meta content="https://revivalmotoco.github.io/bsa-workshop.png" property="og:image"/>
+<meta content="https://revivalmotoco.co.uk" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AutoDealer",
@@ -34,8 +35,8 @@
     "priceRange": "££"
   }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -138,8 +139,8 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('rmc-workshop-hero.jpg') center 47% / cover no-repeat;
-      filter: brightness(0.62);
+      background: url('bsa-workshop.png') center 35% / cover no-repeat;
+      filter: brightness(0.55);
       will-change: transform;
     }
 
@@ -1050,32 +1051,40 @@
     .project-photo-pair {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:6px;
-      margin:1.2rem 0 1rem;
+      gap:10px;
+      margin:10px 0 1rem;
     }
+    .project-photo-pair figure,
+    .project-photo-single figure { margin:0; }
     .project-photo-pair img {
       width:100%;
-      height:260px;
+      height:300px;
       object-fit:cover;
       display:block;
     }
-    @media (max-width:768px) {
-      .project-photo-pair { grid-template-columns:1fr; }
-      .project-photo-pair img { height:auto; aspect-ratio:4/3; }
-    }
-
-    .project-photo-single {
-      margin:1.2rem 0 1rem;
-    }
+    .project-photo-single { margin:1.2rem 0 10px; }
     .project-photo-single img {
       width:100%;
-      height:260px;
+      height:360px;
       object-fit:cover;
       object-position:center;
       display:block;
     }
+    .project-photo-caption {
+      margin-top:.45rem;
+      color:var(--muted);
+      font-size:.68rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
     @media (max-width:768px) {
-      .project-photo-single img { height:auto; aspect-ratio:4/3; object-fit:cover; }
+      .project-photo-pair { grid-template-columns:1fr; }
+      .project-photo-pair img,
+      .project-photo-single img {
+        height:auto;
+        aspect-ratio:4/3;
+        object-fit:cover;
+      }
     }
 
     /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
@@ -1090,418 +1099,389 @@
     .review-quote { font-size:1rem!important; color:rgba(232,224,208,.78)!important; }
     @media (max-width:768px){ .form-grid-two{grid-template-columns:1fr;} }
 
-/* RMC updated identity */
-    .nav-logo picture { display:flex; align-items:center; }
-    .nav-logo picture img { height:54px; width:auto; object-fit:contain; }
-    @media (max-width:600px) { .nav-logo picture img { height:43px; } }
-    .hero-bg { background-position:center 47%; }
-    @media (max-width:768px) { .hero-bg { background-position:57% center; } }
 </style>
-</head>
+<style>
+/* Retail card additions — existing site styling retained */
+.rmc-sale-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);background:#191918;border:1px solid rgba(220,220,220,.18);overflow:hidden;max-width:1050px;margin:2rem auto 0}
+.rmc-sale-card>a{display:block;min-height:310px;background:#292723}.rmc-sale-card img{width:100%;height:100%;min-height:310px;object-fit:cover;display:block}
+.rmc-sale-body{padding:clamp(1.5rem,4vw,3rem)}.rmc-sale-body h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:.025em;color:#f5f0e9;line-height:1.05;margin:.5rem 0 1rem}
+.rmc-sale-body p{color:#d2cbc4;line-height:1.65}.rmc-sale-body .rmc-status{color:#d99a6b;font-size:.75rem;letter-spacing:.16em;font-weight:700}.rmc-sale-body .rmc-price{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#f5f0e9;letter-spacing:.04em;margin:.8rem 0}.rmc-sale-body .rmc-sale-meta{font-size:.85rem}.rmc-sale-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:1.5rem}.rmc-sale-actions>a:not(.btn){color:#e8b08c;text-decoration:underline;text-underline-offset:4px;font-size:.86rem}
+@media(max-width:740px){.rmc-sale-card{grid-template-columns:1fr}.rmc-sale-card>a,.rmc-sale-card img{min-height:0;height:auto;aspect-ratio:16/10}.rmc-sale-body{padding:1.5rem}}
+</style></head>
 <body>
-
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo" aria-label="Revival Moto Co home">
-    <picture><source media="(max-width: 600px)" srcset="rmc-logo-compact.png"><img src="rmc-logo-full.png" alt="Revival Moto Co"></picture>
-    <span class="nav-wordmark">Revival<br>Moto Co</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#services">How It Works</a></li>
-    <li><a href="#stock">For Sale</a></li>
-    <li><a href="#sell" class="nav-cta">Sell Your Bike</a></li>
-    <li><a href="#watch">Watch</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<a aria-label="Revival Moto Co home" class="nav-logo" href="#">
+<img alt="Revival Moto Co" src="logo.png"/>
+<span class="nav-wordmark">Revival<br/>Moto Co</span>
+</a>
+<ul class="nav-links">
+<li><a href="#story">Our Story</a></li>
+<li><a href="#services">How It Works</a></li>
+<li><a class="nav-cta" href="#stock">Motorcycles For Sale</a></li>
+<li><a href="#sell">Sell Your Bike</a></li>
+<li><a href="#watch">Watch</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg" id="hero-bg"></div>
-  <div class="hero-fade"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">We Find It.<br>We Fix It.<br>You Get To<br>Ride It.</h1>
-    <p class="hero-body">We find motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then we sort them out and sell them honestly. That's it, really.</p>
-    <a href="#stock" class="btn">See What's For Sale</a>
-    <a href="#story" class="btn btn-ghost">Our Story</a>
-  </div>
-</section>
-
-<!-- TRUST STRIP -->
-<div class="trust-strip" aria-label="Revival Moto Co promises">
-  <div class="trust-inner">
-    <div class="trust-item">Shropshire Based</div>
-    <div class="trust-item">Independent Business</div>
-    <div class="trust-item">Written Warranty on Retail Bikes</div>
-    <div class="trust-item">Part Exchange Considered</div>
-    <div class="trust-item">Viewings By Appointment</div>
-  </div>
+<div class="hero-bg" id="hero-bg"></div>
+<div class="hero-fade"></div>
+<div class="hero-content">
+<h1 class="hero-title">We Find It.<br/>We Fix It.<br/>You Get To<br/>Ride It.</h1>
+<p class="hero-body">We find motorcycles that have been forgotten about, argued over, or optimistically stored under a tarp. Then we sort them out and sell them honestly. That's it, really.</p>
+<a class="btn" href="#stock">See What's For Sale</a>
+<a class="btn btn-ghost" href="#story">Our Story</a>
 </div>
-
+</section>
+<!-- TRUST STRIP -->
+<div aria-label="Revival Moto Co promises" class="trust-strip">
+<div class="trust-inner">
+<div class="trust-item">Shropshire Based</div>
+<div class="trust-item">Independent Business</div>
+<div class="trust-item">Written Warranty on Retail Bikes</div>
+<div class="trust-item">Part Exchange Considered</div>
+<div class="trust-item">Viewings By Appointment</div>
+</div>
+</div><section class="section section--dark" id="stock">
+<div class="inner">
+<div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0;">
+<div>
+<p class="eyebrow">Motorcycles for Sale &amp; Coming Soon</p>
+<h2 class="heading">The Motorcycles</h2>
+</div>
+<p style="color:var(--muted); font-size:0.82rem;">Available bikes and those being prepared for sale</p>
+</div>
+<div class="stock-grid"><article class="rmc-sale-card"><a aria-label="View the Suzuki TL1000R coming soon listing" href="tl1000r-for-sale.html"><img alt="Yellow Suzuki TL1000R in the RMC workshop during recommissioning" loading="lazy" src="tl1000r-workshop-3.jpg"/></a><div class="rmc-sale-body"><p class="rmc-status">COMING SOON · IN PREPARATION</p><h3>1998 Suzuki TL1000R</h3><p class="rmc-sale-meta">998cc V-twin · Yellow · Approx. 40,000 miles</p><p class="rmc-price">Target asking price £4,795</p><p>Our first RMC motorcycle. An extensive recommission, documented from strip-down to the finishing jobs. Not yet available for purchase.</p><div class="rmc-sale-actions"><a class="btn" href="tl1000r-for-sale.html">View Motorcycle</a><a href="tl1000r-build.html">Read The Build Journal</a></div></div></article></div>
+</div>
+</section>
 <!-- STORY -->
 <section class="section section--dark" id="story">
-  <div class="inner">
-    <div class="story-grid">
-      <div class="story-images">
-        <img src="tl1000r-workshop-1.jpg" alt="Real Revival Moto Co workshop: Suzuki TL1000R stripped on the motorcycle lift">
-        <img src="tl1000r-workshop-2.jpg" alt="Real Revival Moto Co workshop: TL1000R front-end inspection">
-      </div>
-      <div>
-        <p class="eyebrow">Our Story</p>
-        <h2 class="heading">A Lifelong<br>Obsession.<br>A Proper Workshop.</h2>
-        <div class="body-text">
-          <p>Revival Moto Co grew out of Conrad's lifelong obsession with motorcycles — from BSA, Laverda, Moto Guzzi and Aprilia to Honda, Suzuki, Kawasaki and Yamaha — and the idea that interesting motorcycles deserve proper workshop time.</p>
-          <p>RMC is a small independent business, not a faceless motorcycle dealership. The aim is simple: understand each bike, do the work it needs and offer the sort of buying experience a motorcycle enthusiast would want.</p>
-          <p><strong>No fakery. No shortcuts.</strong> Just used motorcycles, good work and a belief that their next chapter matters as much as the last one.</p>
-          
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<div class="story-grid">
+<div class="story-images">
+<img alt="The Revival Moto Co workshop" src="workshop-full.jpg"/>
+<img alt="Workshop showroom" src="workshop-lounge.jpg"/>
+</div>
+<div>
+<p class="eyebrow">Our Story</p>
+<h2 class="heading">A Lifelong<br/>Obsession.<br/>A Proper Workshop.</h2>
+<div class="body-text">
+<p>Revival Moto Co grew out of Conrad's lifelong obsession with motorcycles — from BSA, Laverda, Moto Guzzi and Aprilia to Honda, Suzuki, Kawasaki and Yamaha — and the idea that interesting motorcycles deserve proper workshop time.</p>
+<p>RMC is a small independent business, not a faceless motorcycle dealership. The aim is simple: understand each bike, do the work it needs and offer the sort of buying experience a motorcycle enthusiast would want.</p>
+<p><strong>No fakery. No shortcuts.</strong> Just used motorcycles, good work and a belief that their next chapter matters as much as the last one.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- INCOMING & IN PROGRESS -->
 <section class="section section--dark" id="projects">
-  <div class="inner">
-    <p class="eyebrow">Incoming &amp; In Progress</p>
-    <h2 class="heading">What's<br>Happening</h2>
-    <p class="body-text">Bikes can appear here from the moment they are bought. Follow what's incoming, what's being inspected and recommissioned, and what's getting close to being ready for its next owner.</p>
-    <div class="project-grid">
-      <div class="project-card">
-        <div>
-          <div class="project-status">In The Workshop</div>
-          <h3>Suzuki TL1000R</h3>
-          <p>Strip-down and assessment are underway on the yellow TL1000R. Bodywork has been removed so the chassis, running gear and components can be properly inspected before servicing, repairs and recommissioning continue.</p>
-          <div class="project-photo-pair">
-            <img src="tl1000r-workshop-1.jpg" alt="Suzuki TL1000R stripped down for inspection in the Revival Moto Co workshop" loading="lazy">
-            <img src="tl1000r-workshop-2.jpg" alt="Front view of the stripped Suzuki TL1000R during workshop assessment" loading="lazy">
-          </div>
-          <div class="project-photo-single">
-            <img src="tl1000r-workshop-3.jpg" alt="Suzuki TL1000R undergoing recommissioning at Revival Moto Co" loading="lazy">
-          </div>
-        </div>
-        <div class="project-note">Follow the full inspection, discoveries, cleaning and recommissioning in our photographic build journal.<br><a href="tl1000r-build.html" style="display:inline-block;margin-top:0.85rem;color:#e05a36;font-weight:600;text-decoration:underline;text-underline-offset:4px;letter-spacing:0.04em;">FOLLOW THE TL1000R RECOMMISSION &rarr;</a></div>
-      </div>
-      <div class="project-card">
-        <div>
-          <div class="project-status">At RMC</div>
-          <h3>Kawasaki ZX-10 Tomcat</h3>
-          <p>The ZX-10 Tomcat is now at Revival Moto Co. Bought as a recommissioning project, it’s awaiting its full workshop inspection and assessment before we decide exactly what it needs.</p>
-          <div class="project-photo-single">
-            <img src="zx10-tomcat-incoming.jpg" alt="Kawasaki ZX-10 Tomcat incoming to Revival Moto Co" loading="lazy">
-          </div>
-        </div>
-        <div class="project-note">Next: workshop inspection, assessment and recommissioning plan.</div>
-      </div>
-      <div class="project-card">
-        <div>
-          <div class="project-status">New Arrival · At RMC</div>
-          <h3>1988 BMW K75C</h3>
-          <p>Locally supplied, one owner from new and just 15,039 miles. This original BMW K75C has been stored for 22 years and has now arrived at RMC for a careful inspection and recommissioning. A complete, low-mileage survivor with an interesting story — and plenty to check before it returns to the road.</p>
-          <div class="project-photo-pair">
-            <img src="bmw-k75c-collection-side.jpg" alt="1988 BMW K75C on the trailer at collection" loading="lazy">
-            <img src="bmw-k75c-collection-rear.jpg" alt="BMW K75C secured on the motorcycle trailer for transport" loading="lazy">
-          </div>
-          <div class="project-photo-single">
-            <img src="bmw-k75c-arrival.jpg" alt="Original white BMW K75C at RMC after collection" loading="lazy">
-          </div>
-        </div>
-        <div class="project-note">Next: full assessment, fuel system, brakes, tyres and recommissioning plan. Not yet offered for sale.</div>
-      </div>
-      <div class="project-card">
-        <div>
-          <div class="project-status">Road Test</div>
-          <h3>Nearly Ready</h3>
-          <p>The last jobs are often the little ones. This is where a bike gets its final fettling before it moves into Current Stock.</p>
-        </div>
-        <div class="project-note">Retail bikes will move from here into Current Stock.</div>
-      </div>
-    </div>
-  </div>
-    <div class="history-collage">
-      <img src="rmc-bike-collage-v2.jpg" alt="A selection of motorcycles from Conrad's years of riding and ownership" loading="lazy">
-    </div>
-
+<div class="inner">
+<p class="eyebrow">Incoming &amp; In Progress</p>
+<h2 class="heading">What's<br/>Happening</h2>
+<p class="body-text">Bikes can appear here from the moment they are bought. Follow what's incoming, what's being inspected and recommissioned, and what's getting close to being ready for its next owner.</p>
+<div class="project-grid">
+<div class="project-card">
+<div>
+<div class="project-status">In The Workshop</div>
+<h3>Suzuki TL1000R</h3>
+<p>Strip-down and assessment are underway on the yellow TL1000R. Bodywork has been removed so the chassis, running gear and components can be properly inspected before servicing, repairs and recommissioning continue.</p>
+<div class="project-photo-single">
+<figure>
+<img alt="Suzuki TL1000R at the start of strip-down in the Revival Moto Co workshop" loading="lazy" src="tl1000r-workshop-3.jpg"/>
+<figcaption class="project-photo-caption">Initial strip</figcaption>
+</figure>
+</div>
+<div class="project-photo-pair">
+<figure>
+<img alt="Suzuki TL1000R with bodywork removed for access and inspection" loading="lazy" src="tl1000r-workshop-2.jpg"/>
+<figcaption class="project-photo-caption">Access and inspection</figcaption>
+</figure>
+<figure>
+<img alt="Suzuki TL1000R further stripped during workshop assessment" loading="lazy" src="tl1000r-workshop-1.jpg"/>
+<figcaption class="project-photo-caption">Strip-down underway</figcaption>
+</figure>
+</div>
+</div>
+<div class="project-note">Now: inspection, servicing and recommissioning. Workshop updates will follow as the bike progresses.</div>
+</div>
+<div class="project-card">
+<div>
+<div class="project-status">At RMC</div>
+<h3>Kawasaki ZX-10 Tomcat</h3>
+<p>The ZX-10 Tomcat is now at Revival Moto Co. Bought as a recommissioning project, it’s awaiting its full workshop inspection and assessment before we decide exactly what it needs.</p>
+<div class="project-photo-single">
+<img alt="Kawasaki ZX-10 Tomcat incoming to Revival Moto Co" loading="lazy" src="zx10-tomcat-incoming.jpg"/>
+</div>
+</div>
+<div class="project-note">Next: workshop inspection, assessment and recommissioning plan.</div>
+</div>
+<div class="project-card">
+<div>
+<div class="project-status">Recommissioning</div>
+<h3>Workshop Taking Shape</h3>
+<p>The RMC workshop is being fitted out while the first motorcycles are inspected and prepared.</p>
+</div>
+<div class="project-note">Follow the workshop and the motorcycles on YouTube and social.</div>
+</div>
+<div class="project-card">
+<div>
+<div class="project-status">Road Test</div>
+<h3>Nearly Ready</h3>
+<p>The last jobs are often the little ones. This is where a bike gets its final fettling before it moves into Current Stock.</p>
+</div>
+<div class="project-note">Retail bikes will move from here into Current Stock.</div>
+</div>
+</div>
+</div>
+<div class="history-collage">
+<img alt="A selection of motorcycles from Conrad's years of riding and ownership" loading="lazy" src="rmc-bike-collage-v2.jpg"/>
+</div>
 </section>
-
 <!-- HOW REVIVAL WORKS -->
 <section class="section section--mid" id="services">
-  <div class="inner">
-    <p class="eyebrow">How It Works</p>
-    <h2 class="heading">How Revival<br>Works</h2>
-    <div class="what-grid" style="grid-template-columns: repeat(5,1fr);">
-      <div class="what-card">
-        <div class="what-num">01</div>
-        <h3>Find</h3>
-        <p>We source interesting motorcycles through private sellers, word of mouth and specialist auctions. No salvage stock. No Cat N hiding behind a fresh tin of Hammerite.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">02</div>
-        <h3>Inspect</h3>
-        <p>Each bike gets a thorough inspection. We document what we find — the good, the bad, and the things that make you say words you wouldn't use in front of your nan.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">03</div>
-        <h3>Recommission</h3>
-        <p>We address what needs attention and recommission each bike according to what it needs. We don't try to make a bike into something it isn't — just make it right for what it is.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">04</div>
-        <h3>Ride & Test</h3>
-        <p>Every bike gets ridden before it goes anywhere near a for-sale ad. If something reveals itself on the road, we deal with it.</p>
-      </div>
-      <div class="what-card">
-        <div class="what-num">05</div>
-        <h3>Sell Honestly</h3>
-        <p>You get the full picture — what we found, what we did, and what we chose to leave alone and why. We tell you before you buy.</p>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<p class="eyebrow">How It Works</p>
+<h2 class="heading">How Revival<br/>Works</h2>
+<div class="what-grid" style="grid-template-columns: repeat(5,1fr);">
+<div class="what-card">
+<div class="what-num">01</div>
+<h3>Find</h3>
+<p>We source interesting motorcycles through private sellers, word of mouth and specialist auctions. No salvage stock. No Cat N hiding behind a fresh tin of Hammerite.</p>
+</div>
+<div class="what-card">
+<div class="what-num">02</div>
+<h3>Inspect</h3>
+<p>Each bike gets a thorough inspection. We document what we find — the good, the bad, and the things that make you say words you wouldn't use in front of your nan.</p>
+</div>
+<div class="what-card">
+<div class="what-num">03</div>
+<h3>Recommission</h3>
+<p>We address what needs attention and recommission each bike according to what it needs. We don't try to make a bike into something it isn't — just make it right for what it is.</p>
+</div>
+<div class="what-card">
+<div class="what-num">04</div>
+<h3>Ride &amp; Test</h3>
+<p>Every bike gets ridden before it goes anywhere near a for-sale ad. If something reveals itself on the road, we deal with it.</p>
+</div>
+<div class="what-card">
+<div class="what-num">05</div>
+<h3>Sell Honestly</h3>
+<p>You get the full picture — what we found, what we did, and what we chose to leave alone and why. We tell you before you buy.</p>
+</div>
+</div>
+</div>
 </section>
 <!-- STOCK -->
-<section class="section section--dark" id="stock">
-  <div class="inner">
-    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0;">
-      <div>
-        <p class="eyebrow">Available Now</p>
-        <h2 class="heading">Current Stock</h2>
-      </div>
-      <p style="color:var(--muted); font-size:0.82rem;">Updated as bikes land and leave</p>
-    </div>
-    <figure class="rmc-stock-photo" style="margin:0 0 2rem;">
-      <img src="rmc-tl-tomcat.jpg" alt="Suzuki TL1000R and Kawasaki ZX-10 Tomcat at Revival Moto Co" loading="lazy" style="width:100%;max-height:430px;object-fit:cover;object-position:center 50%;display:block;">
-      <figcaption style="color:var(--muted);font-size:.82rem;margin-top:.65rem;letter-spacing:.03em;">The TL1000R and ZX-10 Tomcat at RMC — examples of the motorcycles we source and recommission.</figcaption>
-    </figure>
-    <div class="stock-grid">
-      <div class="stock-empty" id="stock-empty">
-        <div style="border: 1px solid var(--rust-light); padding: 3rem 2rem; max-width: 500px; margin: 0 auto;">
-          <p style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.3em; color:var(--rust); margin-bottom:1rem;">In The Workshop</p>
-          <h3 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:var(--white); letter-spacing:0.05em; margin-bottom:0.8rem;">Follow The Builds</h3>
-          <p style="color:var(--muted); font-size:0.88rem; margin-bottom:2rem;">The first RMC motorcycles are now in the workshop. Follow the inspection, recommissioning and testing process as we work through each bike — and see exactly what went into them before they’re offered for sale.</p>
-          <a href="#contact" class="btn">Tell Me When A Bike Is Ready</a>
-        </div>
-      </div>
-</div>
-  </div>
-</section>
 
 <!-- SOLD ARCHIVE — hidden until a real sold motorcycle exists -->
-<section class="section section--dark" id="sold-archive" hidden>
-  <div class="inner">
-    <p class="eyebrow">Previously Sold</p>
-    <h2 class="heading">Sold Motorcycles</h2>
-    <div class="stock-grid" id="sold-grid"></div>
-  </div>
+<section class="section section--dark" hidden="" id="sold-archive">
+<div class="inner">
+<p class="eyebrow">Previously Sold</p>
+<h2 class="heading">Sold Motorcycles</h2>
+<div class="stock-grid" id="sold-grid"></div>
+</div>
 </section>
-
 <!-- CUSTOMER REVIEWS — hidden until a genuine permitted review exists -->
-<section class="section section--mid" id="reviews" hidden>
-  <div class="inner">
-    <p class="eyebrow">Customer Reviews</p>
-    <h2 class="heading">What Buyers Say</h2>
-    <div class="project-grid" id="review-grid"></div>
-  </div>
+<section class="section section--mid" hidden="" id="reviews">
+<div class="inner">
+<p class="eyebrow">Customer Reviews</p>
+<h2 class="heading">What Buyers Say</h2>
+<div class="project-grid" id="review-grid"></div>
+</div>
 </section>
-
 <!-- RMC DIFFERENCE -->
 <section class="section section--mid" id="difference">
-  <div class="inner">
-    <p class="eyebrow">The RMC Difference</p>
-    <h2 class="heading">Buying A Used Motorcycle<br>Shouldn't Be A Leap Of Faith</h2>
-    <div class="body-text" style="max-width:760px;">
-      <p>Used motorcycles have history. That's part of the appeal. The problem is when you don't know what that history has left behind.</p>
-      <p>RMC isn't trying to turn a 25-year-old motorcycle into a new one. The aim is to offer interesting bikes whose condition is understood — and be straight about exactly what you're buying.</p>
-      <p><strong>No cosmetic theatre covering mechanical neglect.</strong> No pretending a motorcycle is something it isn't.</p>
-    </div>
-  </div>
+<div class="inner">
+<p class="eyebrow">The RMC Difference</p>
+<h2 class="heading">Buying A Used Motorcycle<br/>Shouldn't Be A Leap Of Faith</h2>
+<div class="body-text" style="max-width:760px;">
+<p>Used motorcycles have history. That's part of the appeal. The problem is when you don't know what that history has left behind.</p>
+<p>RMC isn't trying to turn a 25-year-old motorcycle into a new one. The aim is to offer interesting bikes whose condition is understood — and be straight about exactly what you're buying.</p>
+<p><strong>No cosmetic theatre covering mechanical neglect.</strong> No pretending a motorcycle is something it isn't.</p>
+</div>
+</div>
 </section>
-
 <!-- WARRANTY INFORMATION -->
 <section class="section section--dark" id="warranty">
-  <div class="inner">
-    <p class="eyebrow">Warranty Information</p>
-    <h2 class="heading">Written Warranty<br>On Retail Bikes</h2>
-    <div class="body-text" style="max-width:820px;">
-      <p>Every RMC retail motorcycle is supplied with a written warranty.</p>
-      <p>The exact warranty supplied with each motorcycle will be clearly stated in its advert and sales documents, so the cover is clear before purchase. Any warranty supplied is additional to, and does not affect, statutory rights.</p>
-    </div>
-  </div>
+<div class="inner">
+<p class="eyebrow">Warranty Information</p>
+<h2 class="heading">Written Warranty<br/>On Retail Bikes</h2>
+<div class="body-text" style="max-width:820px;">
+<p>Every RMC retail motorcycle is supplied with a written warranty.</p>
+<p>The exact warranty supplied with each motorcycle will be clearly stated in its advert and sales documents, so the cover is clear before purchase. Any warranty supplied is additional to, and does not affect, statutory rights.</p>
+</div>
+</div>
 </section>
-
 <!-- YOUTUBE -->
 <section class="section section--mid" id="watch">
-  <div class="inner">
-    <div class="yt-grid">
-      <div class="yt-thumb yt-brand-thumb" aria-label="Watch Revival Moto Co on YouTube">
-        <img src="rmc-logo-full.png" alt="Revival Moto Co" class="yt-brand-logo">
-        <div class="yt-play">
-          <div class="yt-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="yt-text">
-        <p class="eyebrow">On YouTube</p>
-        <h2 class="heading">Watch It<br>Happen</h2>
-        <div class="body-text">
-          <p>We film the bikes and the workshop as it happens — finds, fixes, road tests, wrong turns and the moments where something comes apart that definitely wasn't supposed to.</p>
-          <p>Subscribe for the bikes, the work and the occasional creative swearing.</p>
-        </div>
-        <div style="border: 1px solid var(--rust-light); display:inline-block; padding: 0.5rem 1.2rem; margin: 1.2rem 0;">
-          <span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust);">Channel Launching Soon</span>
-        </div>
-        <br>
-        <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank" class="yt-link">Subscribe on YouTube →</a>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<div class="yt-grid">
+<div aria-label="Watch Revival Moto Co on YouTube" class="yt-thumb yt-brand-thumb">
+<img alt="Revival Moto Co" class="yt-brand-logo" src="logo.png"/>
+<div class="yt-play">
+<div class="yt-play-btn">
+<svg viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</div>
+</div>
+</div>
+<div class="yt-text">
+<p class="eyebrow">On YouTube</p>
+<h2 class="heading">Watch It<br/>Happen</h2>
+<div class="body-text">
+<p>We film the bikes and the workshop as it happens — finds, fixes, road tests, wrong turns and the moments where something comes apart that definitely wasn't supposed to.</p>
+<p>Subscribe for the bikes, the work and the occasional creative swearing.</p>
+</div>
+<div style="border: 1px solid var(--rust-light); display:inline-block; padding: 0.5rem 1.2rem; margin: 1.2rem 0;">
+<span style="font-family:'Bebas Neue',sans-serif; font-size:0.72rem; letter-spacing:0.25em; color:var(--rust);">Channel Launching Soon</span>
+</div>
+<br/>
+<a class="yt-link" href="https://www.youtube.com/@RevivalMotoCo" target="_blank">Subscribe on YouTube →</a>
+</div>
+</div>
+</div>
 </section>
-
 <!-- SELL YOUR BIKE -->
 <section class="section section--mid" id="sell">
-  <div class="inner">
-    <div class="contact-grid">
-      <div>
-        <p class="eyebrow">Sell Your Bike</p>
-        <h2 class="heading">Got One<br>We Should<br>Know About?</h2>
-        <div class="body-text">
-          <p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
-          <p>We'll consider anything with <strong>character, potential and a story worth continuing</strong>. If you think it's interesting, tell us about it.</p>
-          <p><strong>Within 50 miles of the workshop is ideal</strong>, but RMC will travel for the right bike.</p>
-          <p style="color:var(--muted); font-size:0.85rem;">We'll need a V5 in the seller's name and the bike needs to be complete — not crashed or written off.</p>
-        </div>
-      </div>
-      <div>
-        <form id="sell-form" action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New motorcycle offered to Revival Moto Co">
-          <input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_url" value="https://revivalmotoco.co.uk/#sell">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="form-grid-two">
-            <div class="form-row"><label for="seller-name">Seller's Name</label><input id="seller-name" type="text" name="Seller name" required autocomplete="name"></div>
-            <div class="form-row"><label for="seller-email">Email Address</label><input id="seller-email" type="email" name="email" required autocomplete="email"></div>
-            <div class="form-row"><label for="seller-phone">Telephone Number</label><input id="seller-phone" type="tel" name="Telephone" required autocomplete="tel"></div>
-            <div class="form-row"><label for="seller-location">Postcode / Location</label><input id="seller-location" type="text" name="Postcode or location" required autocomplete="postal-code"></div>
-            <div class="form-row"><label for="bike-make-model">Motorcycle Make &amp; Model</label><input id="bike-make-model" type="text" name="Motorcycle make and model" required></div>
-            <div class="form-row"><label for="bike-year">Year</label><input id="bike-year" type="number" name="Year" min="1900" max="2100" required></div>
-            <div class="form-row"><label for="bike-reg">Registration Number</label><input id="bike-reg" type="text" name="Registration number" required></div>
-            <div class="form-row"><label for="bike-mileage">Recorded Mileage</label><input id="bike-mileage" type="number" name="Recorded mileage" min="0" required></div>
-            <div class="form-row"><label for="bike-owners">Number Of Owners, If Known</label><input id="bike-owners" type="number" name="Number of owners" min="0"></div>
-            <div class="form-row"><label for="v5c">V5C Position</label><select id="v5c" name="V5C position" required><option value="">Select...</option><option>V5C in my name</option><option>V5C present, not in my name</option><option>V5C missing</option><option>Other / unsure</option></select></div>
-          </div>
-          <div class="form-row"><label for="history">Service / History Information</label><textarea id="history" name="Service and history information" required></textarea></div>
-          <div class="form-row"><label for="running">Does It Start, Run &amp; Ride?</label><select id="running" name="Starts runs and rides" required><option value="">Select...</option><option>Starts, runs and rides</option><option>Starts and runs but does not ride</option><option>Turns over but does not start</option><option>Does not currently run</option><option>Other / unsure</option></select></div>
-          <div class="form-row"><label for="faults">Known Mechanical &amp; Cosmetic Faults</label><textarea id="faults" name="Known mechanical and cosmetic faults" required></textarea></div>
-          <div class="form-row"><label for="asking-price">Asking Price</label><input id="asking-price" type="text" name="Asking price" placeholder="£"></div>
-          <div class="form-row"><label for="extra-info">Additional Information</label><textarea id="extra-info" name="Additional information"></textarea></div>
-          <div class="form-row"><label for="bike-photos">Photographs — Up To 10</label><input id="bike-photos" type="file" name="Motorcycle photographs" accept="image/jpeg,image/png,image/webp" multiple><p class="form-note">JPG, PNG or WebP. Maximum 10 photographs and 10MB total.</p></div>
-          <div id="photo-error" class="form-error" role="alert" hidden></div>
-          <button type="submit" class="btn form-submit">Send Bike Details</button>
-          <p class="form-note">Your details and photographs are submitted online to Revival Moto Co. You won't need to open an email app.</p>
-        </form>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<div class="contact-grid">
+<div>
+<p class="eyebrow">Sell Your Bike</p>
+<h2 class="heading">Got One<br/>We Should<br/>Know About?</h2>
+<div class="body-text">
+<p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
+<p>We'll consider anything with <strong>character, potential and a story worth continuing</strong>. If you think it's interesting, tell us about it.</p>
+<p><strong>Within 50 miles of the workshop is ideal</strong>, but RMC will travel for the right bike.</p>
+<p style="color:var(--muted); font-size:0.85rem;">A V5C in the seller’s name is preferred. If the paperwork is missing or in another name, tell us — we’ll need to make additional ownership and identity checks before considering a purchase. We don’t buy crash-damaged or written-off motorcycles.</p>
+</div>
+</div>
+<div>
+<form action="https://formsubmit.co/info@revivalmotoco.co.uk" enctype="multipart/form-data" id="sell-form" method="POST">
+<input name="_subject" type="hidden" value="New motorcycle offered to Revival Moto Co"/>
+<input name="_next" type="hidden" value="https://revivalmotoco.co.uk/thanks.html"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_url" type="hidden" value="https://revivalmotoco.co.uk/#sell"/>
+<input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text"/>
+<div class="form-grid-two">
+<div class="form-row"><label for="seller-name">Seller's Name</label><input autocomplete="name" id="seller-name" name="Seller name" required="" type="text"/></div>
+<div class="form-row"><label for="seller-email">Email Address</label><input autocomplete="email" id="seller-email" name="email" required="" type="email"/></div>
+<div class="form-row"><label for="seller-phone">Telephone Number</label><input autocomplete="tel" id="seller-phone" name="Telephone" required="" type="tel"/></div>
+<div class="form-row"><label for="seller-location">Postcode / Location</label><input autocomplete="postal-code" id="seller-location" name="Postcode or location" required="" type="text"/></div>
+<div class="form-row"><label for="bike-make-model">Motorcycle Make &amp; Model</label><input id="bike-make-model" name="Motorcycle make and model" required="" type="text"/></div>
+<div class="form-row"><label for="bike-year">Year</label><input id="bike-year" max="2100" min="1900" name="Year" required="" type="number"/></div>
+<div class="form-row"><label for="bike-reg">Registration Number</label><input id="bike-reg" name="Registration number" required="" type="text"/></div>
+<div class="form-row"><label for="bike-mileage">Recorded Mileage</label><input id="bike-mileage" min="0" name="Recorded mileage" required="" type="number"/></div>
+<div class="form-row"><label for="bike-owners">Number Of Owners, If Known</label><input id="bike-owners" min="0" name="Number of owners" type="number"/></div>
+<div class="form-row"><label for="v5c">V5C Position</label><select id="v5c" name="V5C position" required=""><option value="">Select...</option><option>V5C in my name</option><option>V5C present, not in my name</option><option>V5C missing</option><option>Other / unsure</option></select></div>
+</div>
+<div class="form-row"><label for="history">Service / History Information</label><textarea id="history" name="Service and history information" required=""></textarea></div>
+<div class="form-row"><label for="running">Does It Start, Run &amp; Ride?</label><select id="running" name="Starts runs and rides" required=""><option value="">Select...</option><option>Starts, runs and rides</option><option>Starts and runs but does not ride</option><option>Turns over but does not start</option><option>Does not currently run</option><option>Other / unsure</option></select></div>
+<div class="form-row"><label for="faults">Known Mechanical &amp; Cosmetic Faults</label><textarea id="faults" name="Known mechanical and cosmetic faults" required=""></textarea></div>
+<div class="form-row"><label for="asking-price">Asking Price</label><input id="asking-price" name="Asking price" placeholder="£" type="text"/></div>
+<div class="form-row"><label for="extra-info">Additional Information</label><textarea id="extra-info" name="Additional information"></textarea></div>
+<div class="form-row"><label for="bike-photos">Photographs — Up To 10</label><input accept="image/jpeg,image/png,image/webp" id="bike-photos" multiple="" name="Motorcycle photographs" type="file"/><p class="form-note">JPG, PNG or WebP. Maximum 10 photographs and 10MB total.</p></div>
+<div class="form-error" hidden="" id="photo-error" role="alert"></div>
+<button class="btn form-submit" type="submit">Send Bike Details</button>
+<p class="form-note">Your details and photographs are submitted online to Revival Moto Co. You won't need to open an email app.</p>
+</form>
+</div>
+</div>
+</div>
 </section>
 <section class="section section--dark" id="contact">
-  <div class="inner">
-    <div class="contact-grid">
-      <div class="contact-brand-panel">
-        <img src="rmc-logo-full.png" alt="Revival Moto Co">
-        <p>Revival Moto Co</p>
-        <span>Motorcycles with stories worth continuing.</span>
-      </div>
-      <div>
-        <p class="eyebrow">Get In Touch</p>
-        <h2 class="heading">Talk<br>To Us</h2>
-        <p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a specific bike? Want to know when something lands? Any other questions — we're all ears.</p>
-
-        <form id="contact-form" action="https://formsubmit.co/info@revivalmotoco.co.uk" method="POST">
-          <input type="hidden" name="_subject" value="New Revival Moto Co website enquiry">
-          <input type="hidden" name="_next" value="https://revivalmotoco.co.uk/thanks.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_url" value="https://revivalmotoco.co.uk/#contact">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="form-row">
-          <label>Name</label>
-          <input type="text" name="Name" placeholder="Your name" required>
-        </div>
-        <div class="form-row">
-          <label>Email</label>
-          <input type="email" name="email" placeholder="your@email.com" required>
-        </div>
-        <div class="form-row">
-          <label>What's it about?</label>
-          <select name="Subject" required>
-            <option value="">Select...</option>
-            <option>A bike I'm looking for</option>
-            <option>A bike currently in stock</option>
-            <option>Workshop / recommissioning enquiry</option>
-            <option>General enquiry</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Message</label>
-          <textarea name="Message" placeholder="Tell us what you're after..." required></textarea>
-        </div>
-        <button type="submit" class="btn form-submit">Send Message</button>
-        <p class="form-note">Your message is submitted online to Revival Moto Co.</p>
-        </form>
-
-        <div class="contact-direct">
-          <p>Or directly</p>
-          <a href="mailto:info@revivalmotoco.co.uk">info@revivalmotoco.co.uk</a>
-          <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube — Revival Moto Co</a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<div class="contact-grid">
+<div class="contact-brand-panel">
+<img alt="Revival Moto Co" src="logo.png"/>
+<p>Revival Moto Co</p>
+<span>Motorcycles with stories worth continuing.</span>
+</div>
+<div>
+<p class="eyebrow">Get In Touch</p>
+<h2 class="heading">Talk<br/>To Us</h2>
+<p style="color:rgba(232,224,208,0.65); font-size:0.95rem; margin-bottom:2rem;">After a specific bike? Want to know when something lands? Any other questions — we're all ears.</p>
+<form action="https://formsubmit.co/info@revivalmotoco.co.uk" id="contact-form" method="POST">
+<input name="_subject" type="hidden" value="New Revival Moto Co website enquiry"/>
+<input name="_next" type="hidden" value="https://revivalmotoco.co.uk/thanks.html"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_url" type="hidden" value="https://revivalmotoco.co.uk/#contact"/>
+<input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text"/>
+<div class="form-row">
+<label>Name</label>
+<input name="Name" placeholder="Your name" required="" type="text"/>
+</div>
+<div class="form-row">
+<label>Email</label>
+<input name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+<div class="form-row">
+<label>What's it about?</label>
+<select name="Subject" required="">
+<option value="">Select...</option>
+<option>A bike I'm looking for</option>
+<option>A bike currently in stock</option>
+<option>Workshop / recommissioning enquiry</option>
+<option>General enquiry</option>
+</select>
+</div>
+<div class="form-row">
+<label>Message</label>
+<textarea name="Message" placeholder="Tell us what you're after..." required=""></textarea>
+</div>
+<button class="btn form-submit" type="submit">Send Message</button>
+<p class="form-note">Your message is submitted online to Revival Moto Co.</p>
+</form>
+<div class="contact-direct">
+<p>Or directly</p>
+<a href="mailto:info@revivalmotoco.co.uk">info@revivalmotoco.co.uk</a>
+<a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube — Revival Moto Co</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- PRACTICAL INFO -->
 <section class="section section--mid" id="visit">
-  <div class="inner">
-    <p class="eyebrow">Visit / Contact</p>
-    <h2 class="heading">Come And<br>Talk Motorcycles</h2>
-    <div class="what-grid" style="grid-template-columns: repeat(3,1fr);">
-      <div class="what-card">
-        <h3>Workshop</h3>
-        <p>Aston Munslow, Shropshire. Visits by arrangement so we can make sure someone is there and the kettle is on.</p>
-      </div>
-      <div class="what-card">
-        <h3>Opening Hours</h3>
-        <p>Monday–Friday 08:00–16:30<br>Saturday 08:00–12:30</p>
-      </div>
-      <div class="what-card">
-        <h3>Contact</h3>
-        <p><a href="mailto:info@revivalmotoco.co.uk" style="color:var(--rust); text-decoration:none;">info@revivalmotoco.co.uk</a><br>Motorcycle collection and delivery can be arranged. Ask us for a quote.</p>
-      </div>
-    </div>
-  </div>
+<div class="inner">
+<p class="eyebrow">Visit / Contact</p>
+<h2 class="heading">Come And<br/>Talk Motorcycles</h2>
+<div class="what-grid" style="grid-template-columns: repeat(3,1fr);">
+<div class="what-card">
+<h3>Workshop</h3>
+<p>Aston Munslow, Shropshire. Visits by arrangement so we can make sure someone is there and the kettle is on.</p>
+</div>
+<div class="what-card">
+<h3>Opening Hours</h3>
+<p>Monday–Friday 08:00–16:30<br/>Saturday 08:00–12:30</p>
+</div>
+<div class="what-card">
+<h3>Contact</h3>
+<p><a href="mailto:info@revivalmotoco.co.uk" style="color:var(--rust); text-decoration:none;">info@revivalmotoco.co.uk</a><br/>Motorcycle collection and delivery can be arranged. Ask us for a quote.</p>
+</div>
+</div>
+</div>
 </section>
-
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <img src="rmc-logo-full.png" alt="Revival Moto Co">
-    </div>
-    <div class="footer-mid">
-      Shropshire<br>
-      info@revivalmotoco.co.uk<br>
-      <a href="privacy.html" style="color:inherit;">Privacy</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube</a>
-      <a href="https://www.instagram.com/RevivalMotoCo" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@conradwebster863" target="_blank">TikTok</a>
-      <a href="https://www.facebook.com/profile.php?id=61589397403742" target="_blank">Facebook</a>
-    </div>
-  </div>
+<div class="footer-inner">
+<div class="footer-logo">
+<img alt="Revival Moto Co" src="logo.png"/>
+</div>
+<div class="footer-mid">
+      Shropshire<br/>
+      info@revivalmotoco.co.uk<br/>
+<a href="privacy.html" style="color:inherit;">Privacy</a>
+</div>
+<div class="footer-social">
+<a href="https://www.youtube.com/@RevivalMotoCo" target="_blank">YouTube</a>
+<a href="https://www.instagram.com/RevivalMotoCo" target="_blank">Instagram</a>
+<a href="https://www.tiktok.com/@conradwebster863" target="_blank">TikTok</a>
+<a href="https://www.facebook.com/profile.php?id=61589397403742" target="_blank">Facebook</a>
+</div>
+</div>
 </footer>
-
 <script src="motorcycles.js"></script>
 <script>
   const statusLabels = { available:'Available', 'coming-soon':'Coming Soon', reserved:'Reserved', sold:'Sold' };
@@ -1538,6 +1518,5 @@
   const heroBg = document.getElementById('hero-bg');
   window.addEventListener('scroll', () => { if (heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.18}px)`; }, { passive: true });
 </script>
-
 </body>
 </html>
