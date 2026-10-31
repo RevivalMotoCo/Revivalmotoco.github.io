@@ -9,7 +9,7 @@
 <meta content="motorcycle recommissioning, classic motorcycles for sale, vintage motorcycles Shropshire, motorcycle workshop Shropshire, used motorcycles UK, barn find motorcycles" name="keywords"/>
 <meta content="Revival Moto Co — Honest Motorcycles, Shropshire" property="og:title"/>
 <meta content="We find neglected motorcycles, sort them out properly, and sell them honestly. Based in Aston Munslow, Shropshire." property="og:description"/>
-<meta content="https://revivalmotoco.github.io/bsa-workshop.png" property="og:image"/>
+<meta content="https://revivalmotoco.co.uk/rmc-workshop-hero.jpg" property="og:image"/>
 <meta content="https://revivalmotoco.co.uk" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <script type="application/ld+json">
@@ -139,8 +139,8 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('bsa-workshop.png') center 35% / cover no-repeat;
-      filter: brightness(0.55);
+      background: url('rmc-workshop-hero.jpg') center 47% / cover no-repeat;
+      filter: brightness(0.62);
       will-change: transform;
     }
 
@@ -1051,40 +1051,32 @@
     .project-photo-pair {
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin:10px 0 1rem;
+      gap:6px;
+      margin:1.2rem 0 1rem;
     }
-    .project-photo-pair figure,
-    .project-photo-single figure { margin:0; }
     .project-photo-pair img {
       width:100%;
-      height:300px;
+      height:260px;
       object-fit:cover;
       display:block;
     }
-    .project-photo-single { margin:1.2rem 0 10px; }
+    @media (max-width:768px) {
+      .project-photo-pair { grid-template-columns:1fr; }
+      .project-photo-pair img { height:auto; aspect-ratio:4/3; }
+    }
+
+    .project-photo-single {
+      margin:1.2rem 0 1rem;
+    }
     .project-photo-single img {
       width:100%;
-      height:360px;
+      height:260px;
       object-fit:cover;
       object-position:center;
       display:block;
     }
-    .project-photo-caption {
-      margin-top:.45rem;
-      color:var(--muted);
-      font-size:.68rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
     @media (max-width:768px) {
-      .project-photo-pair { grid-template-columns:1fr; }
-      .project-photo-pair img,
-      .project-photo-single img {
-        height:auto;
-        aspect-ratio:4/3;
-        object-fit:cover;
-      }
+      .project-photo-single img { height:auto; aspect-ratio:4/3; object-fit:cover; }
     }
 
     /* ── FUNCTIONAL UPDATE: FORMS / STOCK / ARCHIVE ── */
@@ -1099,27 +1091,41 @@
     .review-quote { font-size:1rem!important; color:rgba(232,224,208,.78)!important; }
     @media (max-width:768px){ .form-grid-two{grid-template-columns:1fr;} }
 
+/* RMC updated identity */
+    .nav-logo picture { display:flex; align-items:center; }
+    .nav-logo picture img { height:54px; width:auto; object-fit:contain; }
+    @media (max-width:600px) { .nav-logo picture img { height:43px; } }
+    .hero-bg { background-position:center 47%; }
+    @media (max-width:768px) { .hero-bg { background-position:57% center; } }
 </style>
 <style>
-/* Retail card additions — existing site styling retained */
-.rmc-sale-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);background:#191918;border:1px solid rgba(220,220,220,.18);overflow:hidden;max-width:1050px;margin:2rem auto 0}
-.rmc-sale-card>a{display:block;min-height:310px;background:#292723}.rmc-sale-card img{width:100%;height:100%;min-height:310px;object-fit:cover;display:block}
-.rmc-sale-body{padding:clamp(1.5rem,4vw,3rem)}.rmc-sale-body h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:.025em;color:#f5f0e9;line-height:1.05;margin:.5rem 0 1rem}
-.rmc-sale-body p{color:#d2cbc4;line-height:1.65}.rmc-sale-body .rmc-status{color:#d99a6b;font-size:.75rem;letter-spacing:.16em;font-weight:700}.rmc-sale-body .rmc-price{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#f5f0e9;letter-spacing:.04em;margin:.8rem 0}.rmc-sale-body .rmc-sale-meta{font-size:.85rem}.rmc-sale-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:1.5rem}.rmc-sale-actions>a:not(.btn){color:#e8b08c;text-decoration:underline;text-underline-offset:4px;font-size:.86rem}
-@media(max-width:740px){.rmc-sale-card{grid-template-columns:1fr}.rmc-sale-card>a,.rmc-sale-card img{min-height:0;height:auto;aspect-ratio:16/10}.rmc-sale-body{padding:1.5rem}}
+/* RMC retail stock: full-width layout independent of legacy stock-grid styles */
+#stock .rmc-stock-layout{display:block;width:100%;max-width:100%;margin-top:26px}
+#stock .rmc-feature-bike{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);width:100%;min-width:0;align-items:stretch;background:#191817;border:1px solid #3c3530;overflow:hidden}
+#stock .rmc-feature-image{display:block;min-width:0;min-height:360px;overflow:hidden;background:#111}
+#stock .rmc-feature-image img{display:block;width:100%;height:100%;min-height:360px;object-fit:cover;object-position:center}
+#stock .rmc-feature-info{min-width:0;padding:clamp(24px,3.5vw,54px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+#stock .rmc-feature-status{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#d69a72;font-weight:700;margin:0 0 14px}
+#stock .rmc-feature-info h3{font-size:clamp(30px,3.3vw,55px);line-height:1.06;margin:0 0 18px;overflow-wrap:normal}
+#stock .rmc-feature-meta{font-size:15px;line-height:1.7;margin:0 0 15px;color:#c5bcb6}
+#stock .rmc-feature-price{font-size:clamp(32px,3vw,45px);font-weight:800;line-height:1.2;color:#f0e8df;margin:0 0 18px}
+#stock .rmc-feature-info>p:not(.rmc-feature-status):not(.rmc-feature-meta):not(.rmc-feature-price){font-size:16px;line-height:1.7;color:#c7c0b9;margin:0 0 24px}
+#stock .rmc-feature-links{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+#stock .rmc-feature-secondary{color:#f1e8df;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){#stock .rmc-feature-bike{grid-template-columns:1fr}#stock .rmc-feature-image,#stock .rmc-feature-image img{min-height:0;height:auto;aspect-ratio:4/3}#stock .rmc-feature-info{padding:24px}#stock .rmc-feature-info h3{font-size:36px}}
 </style></head>
 <body>
 <!-- NAV -->
 <nav>
 <a aria-label="Revival Moto Co home" class="nav-logo" href="#">
-<img alt="Revival Moto Co" src="rmc-badge.jpg"/>
+<picture><source media="(max-width: 600px)" srcset="rmc-logo-compact.png"/><img alt="Revival Moto Co RMC badge" src="rmc-badge.jpg"/></picture>
 <span class="nav-wordmark">Revival<br/>Moto Co</span>
 </a>
 <ul class="nav-links">
 <li><a href="#story">Our Story</a></li>
 <li><a href="#services">How It Works</a></li>
-<li><a class="nav-cta" href="#stock">Motorcycles For Sale</a></li>
-<li><a href="#sell">Sell Your Bike</a></li>
+<li><a href="#stock">For Sale</a></li>
+<li><a class="nav-cta" href="#sell">Sell Your Bike</a></li>
 <li><a href="#watch">Watch</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -1144,25 +1150,14 @@
 <div class="trust-item">Part Exchange Considered</div>
 <div class="trust-item">Viewings By Appointment</div>
 </div>
-</div><section class="section section--dark" id="stock">
-<div class="inner">
-<div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; margin-bottom:0;">
-<div>
-<p class="eyebrow">Motorcycles for Sale &amp; Coming Soon</p>
-<h2 class="heading">The Motorcycles</h2>
 </div>
-<p style="color:var(--muted); font-size:0.82rem;">Available bikes and those being prepared for sale</p>
-</div>
-<div class="stock-grid"><article class="rmc-sale-card"><a aria-label="View the Suzuki TL1000R coming soon listing" href="tl1000r-for-sale.html"><img alt="Yellow Suzuki TL1000R in the RMC workshop during recommissioning" loading="lazy" src="tl1000r-workshop-3.jpg"/></a><div class="rmc-sale-body"><p class="rmc-status">COMING SOON · IN PREPARATION</p><h3>1998 Suzuki TL1000R</h3><p class="rmc-sale-meta">998cc V-twin · Yellow · Approx. 40,000 miles</p><p class="rmc-price">Target asking price £4,795</p><p>Our first RMC motorcycle. An extensive recommission, documented from strip-down to the finishing jobs. Not yet available for purchase.</p><div class="rmc-sale-actions"><a class="btn" href="tl1000r-for-sale.html">View Motorcycle</a><a href="tl1000r-build.html">Read The Build Journal</a></div></div></article></div>
-</div>
-</section>
 <!-- STORY -->
-<section class="section section--dark" id="story">
+<section class="section section--dark" id="stock"><div class="inner"><div class="section-head"><div><p class="eyebrow">MOTORCYCLES FOR SALE &amp; COMING SOON</p><h2>The Motorcycles</h2><p>Available bikes and those being prepared for sale.</p></div></div><div class="rmc-stock-layout"><article class="rmc-feature-bike"><a class="rmc-feature-image" href="tl1000r-for-sale.html"><img alt="1998 yellow Suzuki TL1000R being recommissioned at Revival Moto Co" loading="lazy" src="tl1000r-workshop-3.jpg"/></a><div class="rmc-feature-info"><p class="rmc-feature-status">COMING SOON · IN PREPARATION</p><h3>1998 Suzuki TL1000R</h3><p class="rmc-feature-meta">998cc V-twin  ·  Yellow  ·  Approx. 40,000 miles</p><p class="rmc-feature-price">£4,795</p><p>Our first RMC motorcycle. A thorough recommission, with the work documented as we go. The bike isn't ready for sale just yet.</p><div class="rmc-feature-links"><a class="btn" href="tl1000r-for-sale.html">View motorcycle</a><a class="rmc-feature-secondary" href="tl1000r-build.html">Read the build journal</a></div></div></article></div></div></section><section class="section section--dark" id="story">
 <div class="inner">
 <div class="story-grid">
 <div class="story-images">
-<img alt="The Revival Moto Co workshop" src="workshop-full.jpg"/>
-<img alt="Workshop showroom" src="workshop-lounge.jpg"/>
+<img alt="Real Revival Moto Co workshop: Suzuki TL1000R stripped on the motorcycle lift" src="tl1000r-workshop-1.jpg"/>
+<img alt="Real Revival Moto Co workshop: TL1000R front-end inspection" src="tl1000r-workshop-2.jpg"/>
 </div>
 <div>
 <p class="eyebrow">Our Story</p>
@@ -1188,24 +1183,15 @@
 <div class="project-status">In The Workshop</div>
 <h3>Suzuki TL1000R</h3>
 <p>Strip-down and assessment are underway on the yellow TL1000R. Bodywork has been removed so the chassis, running gear and components can be properly inspected before servicing, repairs and recommissioning continue.</p>
-<div class="project-photo-single">
-<figure>
-<img alt="Suzuki TL1000R at the start of strip-down in the Revival Moto Co workshop" loading="lazy" src="tl1000r-workshop-3.jpg"/>
-<figcaption class="project-photo-caption">Initial strip</figcaption>
-</figure>
-</div>
 <div class="project-photo-pair">
-<figure>
-<img alt="Suzuki TL1000R with bodywork removed for access and inspection" loading="lazy" src="tl1000r-workshop-2.jpg"/>
-<figcaption class="project-photo-caption">Access and inspection</figcaption>
-</figure>
-<figure>
-<img alt="Suzuki TL1000R further stripped during workshop assessment" loading="lazy" src="tl1000r-workshop-1.jpg"/>
-<figcaption class="project-photo-caption">Strip-down underway</figcaption>
-</figure>
+<img alt="Suzuki TL1000R stripped down for inspection in the Revival Moto Co workshop" loading="lazy" src="tl1000r-workshop-1.jpg"/>
+<img alt="Front view of the stripped Suzuki TL1000R during workshop assessment" loading="lazy" src="tl1000r-workshop-2.jpg"/>
+</div>
+<div class="project-photo-single">
+<img alt="Suzuki TL1000R undergoing recommissioning at Revival Moto Co" loading="lazy" src="tl1000r-workshop-3.jpg"/>
 </div>
 </div>
-<div class="project-note">Now: inspection, servicing and recommissioning. Workshop updates will follow as the bike progresses.</div>
+<div class="project-note">Follow the full inspection, discoveries, cleaning and recommissioning in our photographic build journal.<br/><a href="tl1000r-build.html" style="display:inline-block;margin-top:0.85rem;color:#e05a36;font-weight:600;text-decoration:underline;text-underline-offset:4px;letter-spacing:0.04em;">FOLLOW THE TL1000R RECOMMISSION →</a></div>
 </div>
 <div class="project-card">
 <div>
@@ -1220,11 +1206,18 @@
 </div>
 <div class="project-card">
 <div>
-<div class="project-status">Recommissioning</div>
-<h3>Workshop Taking Shape</h3>
-<p>The RMC workshop is being fitted out while the first motorcycles are inspected and prepared.</p>
+<div class="project-status">New Arrival · At RMC</div>
+<h3>1988 BMW K75C</h3>
+<p>Locally supplied, one owner from new and just 15,039 miles. This original BMW K75C has been stored for 22 years and has now arrived at RMC for a careful inspection and recommissioning. A complete, low-mileage survivor with an interesting story — and plenty to check before it returns to the road.</p>
+<div class="project-photo-pair">
+<img alt="1988 BMW K75C on the trailer at collection" loading="lazy" src="bmw-k75c-collection-side.jpg"/>
+<img alt="BMW K75C secured on the motorcycle trailer for transport" loading="lazy" src="bmw-k75c-collection-rear.jpg"/>
 </div>
-<div class="project-note">Follow the workshop and the motorcycles on YouTube and social.</div>
+<div class="project-photo-single">
+<img alt="Original white BMW K75C at RMC after collection" loading="lazy" src="bmw-k75c-arrival.jpg"/>
+</div>
+</div>
+<div class="project-note">Next: full assessment, fuel system, brakes, tyres and recommissioning plan. Not yet offered for sale.</div>
 </div>
 <div class="project-card">
 <div>
@@ -1320,7 +1313,7 @@
 <div class="inner">
 <div class="yt-grid">
 <div aria-label="Watch Revival Moto Co on YouTube" class="yt-thumb yt-brand-thumb">
-<img alt="Revival Moto Co" class="yt-brand-logo" src="rmc-badge.jpg"/>
+<img alt="Revival Moto Co RMC badge" class="yt-brand-logo" src="rmc-badge.jpg"/>
 <div class="yt-play">
 <div class="yt-play-btn">
 <svg viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -1354,7 +1347,7 @@
 <p>We're always looking for bikes to buy. Barn finds, long-term projects, machines that have been sitting around waiting for someone to care — that's exactly what we're after.</p>
 <p>We'll consider anything with <strong>character, potential and a story worth continuing</strong>. If you think it's interesting, tell us about it.</p>
 <p><strong>Within 50 miles of the workshop is ideal</strong>, but RMC will travel for the right bike.</p>
-<p style="color:var(--muted); font-size:0.85rem;">A V5C in the seller’s name is preferred. If the paperwork is missing or in another name, tell us — we’ll need to make additional ownership and identity checks before considering a purchase. We don’t buy crash-damaged or written-off motorcycles.</p>
+<p style="color:var(--muted); font-size:0.85rem;">We'll need a V5 in the seller's name and the bike needs to be complete — not crashed or written off.</p>
 </div>
 </div>
 <div>
@@ -1394,7 +1387,7 @@
 <div class="inner">
 <div class="contact-grid">
 <div class="contact-brand-panel">
-<img alt="Revival Moto Co" src="rmc-badge.jpg"/>
+<img alt="Revival Moto Co RMC badge" src="rmc-badge.jpg"/>
 <p>Revival Moto Co</p>
 <span>Motorcycles with stories worth continuing.</span>
 </div>
@@ -1467,7 +1460,7 @@
 <footer>
 <div class="footer-inner">
 <div class="footer-logo">
-<img alt="Revival Moto Co" src="rmc-badge.jpg"/>
+<img alt="Revival Moto Co RMC badge" src="rmc-badge.jpg"/>
 </div>
 <div class="footer-mid">
       Shropshire<br/>
