@@ -1110,6 +1110,19 @@
     @media (max-width:600px) { .nav-logo picture img { height:43px; } }
     .hero-bg { background-position:center 47%; }
     @media (max-width:768px) { .hero-bg { background-position:57% center; } }
+
+/* Accessible mobile navigation */
+.mobile-menu-toggle,.mobile-menu{display:none}
+@media(max-width:1024px){
+  nav .nav-links{display:none!important}
+  .mobile-menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:48px;height:48px;flex-shrink:0;background:#262321;border:1px solid #776251;border-radius:5px;cursor:pointer;position:relative;z-index:202}
+  .mobile-menu-toggle span{display:block;width:23px;height:2px;background:#f4e9db;border-radius:2px}
+  .mobile-menu{position:absolute;top:100%;left:0;right:0;z-index:201;background:#181615;border-bottom:2px solid #c64a2d;padding:10px 18px 20px;max-height:calc(100dvh - 70px);overflow-y:auto;box-shadow:0 16px 30px #0009}
+  .mobile-menu:not([hidden]){display:flex;flex-direction:column}
+  .mobile-menu a{padding:12px 8px;border-bottom:1px solid #ffffff20;color:#e8e0d0;text-decoration:none;font:600 14px/1.4 Inter,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}
+  .mobile-menu a:focus,.mobile-menu a:hover{color:#f4a67c}
+  .mobile-menu-toggle:focus-visible{outline:2px solid #f4a67c;outline-offset:3px}
+}
 </style>
 <style>
 /* RMC retail stock: full-width layout independent of legacy stock-grid styles */
@@ -1147,6 +1160,18 @@
 <li><a href="#watch">Watch</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+<button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+<div class="mobile-menu" id="mobile-navigation" hidden>
+<a href="workshop-services.html">Workshop Services</a>
+<a href="workshop-services.html#transport">Motorcycle Transport</a>
+<a href="#stock">Motorcycles For Sale</a>
+<a href="shop.html">RMC Shop</a>
+<a href="#story">Our Story</a>
+<a href="#services">How It Works</a>
+<a href="#sell">Sell Your Bike</a>
+<a href="#watch">Watch</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 <!-- HERO -->
 <section class="hero">
@@ -1543,6 +1568,20 @@
   if(sellForm) sellForm.addEventListener('submit',e=>{ if(!validatePhotos()){ e.preventDefault(); photos.focus(); } });
 
   // Keep the hero image stationary so its framing stays consistent while scrolling.
+</script>
+
+<script>
+(function(){
+ const button=document.querySelector('.mobile-menu-toggle');
+ const menu=document.getElementById('mobile-navigation');
+ if(!button||!menu)return;
+ const close=()=>{menu.hidden=true;button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation menu');};
+ button.addEventListener('click',()=>{const opening=menu.hidden;menu.hidden=!opening;button.setAttribute('aria-expanded',String(opening));button.setAttribute('aria-label',opening?'Close navigation menu':'Open navigation menu');});
+ menu.addEventListener('click',e=>{if(e.target.closest('a'))close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+ document.addEventListener('click',e=>{if(!menu.hidden&&!menu.contains(e.target)&&!button.contains(e.target))close();});
+ window.addEventListener('resize',()=>{if(window.innerWidth>1024)close();});
+})();
 </script>
 </body>
 </html>
