@@ -1113,7 +1113,7 @@
 
 /* Accessible mobile navigation */
 .mobile-menu-toggle,.mobile-menu{display:none}
-@media(max-width:1024px){
+@media(max-width:1199px){
   nav .nav-links{display:none!important}
   .mobile-menu-toggle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:48px;height:48px;flex-shrink:0;background:#262321;border:1px solid #776251;border-radius:5px;cursor:pointer;position:relative;z-index:202}
   .mobile-menu-toggle span{display:block;width:23px;height:2px;background:#f4e9db;border-radius:2px}
@@ -1141,6 +1141,15 @@
 @media(max-width:760px){#stock .rmc-feature-bike{grid-template-columns:1fr}#stock .rmc-feature-image,#stock .rmc-feature-image img{min-height:0;height:auto;aspect-ratio:4/3}#stock .rmc-feature-info{padding:24px}#stock .rmc-feature-info h3{font-size:36px}}
 </style><style>
 .rmc-new-services{background:#151515;color:#f4efe5;padding:76px 22px}.rmc-new-services .inner{max-width:1160px;margin:auto}.rmc-new-services h2{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(42px,6vw,76px);line-height:1;margin:12px 0 18px}.rmc-new-services p{line-height:1.7;color:#e1d8ce}.rmc-new-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}.rmc-new-tile{background:#24211f;overflow:hidden;border:1px solid #49382c}.rmc-new-tile img{width:100%;height:290px;object-fit:cover;display:block}.rmc-new-tile div{padding:25px}.rmc-new-tile h3{font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;margin:0 0 12px;color:#f4efe5}.rmc-new-tile a{display:inline-block;margin-top:12px;color:#f4efe5;border-bottom:2px solid #c98351;text-decoration:none;padding-bottom:5px;font-weight:700}.rmc-new-services .rmc-lead{max-width:780px}@media(max-width:950px){.rmc-new-grid{grid-template-columns:1fr}.rmc-new-tile img{height:220px}.rmc-new-services{padding:54px 20px}}
+
+@media (min-width:1200px) {
+  nav { gap: 1.5rem; }
+  .nav-links { align-items: center; justify-content: flex-end; gap: clamp(0.9rem, 1.65vw, 2rem); }
+  .nav-links a { display: block; white-space: nowrap; letter-spacing: 0.08em; }
+}
+.hero-title { text-wrap: balance; }
+.rmc-new-services h2, .rmc-new-tile h3 { text-wrap: balance; }
+.rmc-new-tile .rmc-storage-photo { object-position: center 50%; }
 </style></head>
 <body>
 <!-- NAV -->
@@ -1181,7 +1190,7 @@
 <div class="hero-fade"></div>
 <div class="hero-content">
 <p class="hero-tag">REVIVAL MOTO CO · ASTON MUNSLOW, SHROPSHIRE</p>
-<h1 class="hero-title">Motorcycle<br/>Servicing,<br/>Storage,<br/>Sales &amp;<br/>Transport.</h1>
+<h1 class="hero-title">Motorcycle servicing, storage, sales &amp; transport</h1>
 <p class="hero-identity">PROPER MOTORCYCLE PEOPLE. PROPER MOTORCYCLE WORK.</p>
 <p class="hero-body">Motorcycle servicing, secure heated storage, collection and delivery, and carefully recommissioned motorcycles for sale.</p>
 <a class="btn" href="workshop-services.html#quote">Enquire About Servicing</a>
@@ -1189,7 +1198,7 @@
 <a class="btn btn-ghost" href="#stock">Bikes For Sale</a>
 </div>
 </section>
-<section class="rmc-new-services" id="workshop-services"><div class="inner"><p class="eyebrow">HOW WE CAN HELP</p><h2>MORE THAN MOTORCYCLE SALES.</h2><p class="rmc-lead">Alongside the bikes we sell, we provide servicing, transport, parts cleaning and secure motorcycle storage in Shropshire.</p><div class="rmc-new-grid"><article class="rmc-new-tile"><img src="rmc-workshop-service-photo.jpg" alt="Motorcycle maintenance at Revival Moto Co" loading="lazy"><div><h3>Workshop Services</h3><p>Have a job in mind? Tell us about your motorcycle and we’ll discuss what’s involved, availability and a quote.</p><a href="workshop-services.html#quote">Discuss your job</a></div></article><article class="rmc-new-tile"><img src="rmc-motorcycle-transport.jpg" alt="Motorcycle secured on the Revival Moto Co transport trailer" loading="lazy"><div><h3>Motorcycle Transport</h3><p>Collection and delivery for motorcycles, including non-runners. Get in touch with your collection and destination details.</p><a href="workshop-services.html#transport">Arrange transport</a></div></article><article class="rmc-new-tile"><img src="rmc-ultrasonic-cleaner.jpg" alt="Revival Moto Co ultrasonic cleaner for removed motorcycle components" loading="lazy"><div><h3>Ultrasonic Parts Cleaning</h3><p>Got removed components that need a thorough clean? Ask us about our parts-only ultrasonic service.</p><a href="workshop-services.html#quote">Ask about parts cleaning</a></div></article><article class="rmc-new-tile"><img src="workshop-wide.png" alt="Secure indoor motorcycle storage at Revival Moto Co" loading="lazy"><div><h3>Motorcycle Storage</h3><p>Secure, heated storage from £10 per week, with long-term discounts. CCTV and alarm protection; optional charging, maintenance and cleaning.</p><a href="workshop-services.html#storage">Enquire about storage</a></div></article></div></div></section>
+<section class="rmc-new-services" id="workshop-services"><div class="inner"><p class="eyebrow">HOW WE CAN HELP</p><h2>MORE THAN MOTORCYCLE SALES.</h2><p class="rmc-lead">Alongside the bikes we sell, we provide servicing, transport, parts cleaning and secure motorcycle storage in Shropshire.</p><div class="rmc-new-grid"><article class="rmc-new-tile"><img src="rmc-workshop-service-photo.jpg" alt="Motorcycle maintenance at Revival Moto Co" loading="lazy"><div><h3>Workshop Services</h3><p>Have a job in mind? Tell us about your motorcycle and we’ll discuss what’s involved, availability and a quote.</p><a href="workshop-services.html#quote">Discuss your job</a></div></article><article class="rmc-new-tile"><img src="rmc-motorcycle-transport.jpg" alt="Motorcycle secured on the Revival Moto Co transport trailer" loading="lazy"><div><h3>Motorcycle Transport</h3><p>Collection and delivery for motorcycles, including non-runners. Get in touch with your collection and destination details.</p><a href="workshop-services.html#transport">Arrange transport</a></div></article><article class="rmc-new-tile"><img src="rmc-ultrasonic-cleaner.jpg" alt="Revival Moto Co ultrasonic cleaner for removed motorcycle components" loading="lazy"><div><h3>Ultrasonic Parts Cleaning</h3><p>Got removed components that need a thorough clean? Ask us about our parts-only ultrasonic service.</p><a href="workshop-services.html#quote">Ask about parts cleaning</a></div></article><article class="rmc-new-tile"><img class="rmc-storage-photo" src="bmw-k75c-arrival.jpg" alt="White BMW K75C parked indoors at Revival Moto Co" loading="lazy"><div><h3>Motorcycle Storage</h3><p>Secure, heated storage from £10 per week, with long-term discounts. CCTV and alarm protection; optional charging, maintenance and cleaning.</p><a href="workshop-services.html#storage">Enquire about storage</a></div></article></div></div></section>
 <section class="section section--dark" id="stock"><div class="inner"><div class="section-head"><div><p class="eyebrow">MOTORCYCLES FOR SALE &amp; COMING SOON</p><h2>The Motorcycles</h2><p>Available bikes and those being prepared for sale.</p></div></div><div class="rmc-stock-layout"><article class="rmc-feature-bike"><a class="rmc-feature-image" href="tl1000r-for-sale.html"><img alt="1998 yellow Suzuki TL1000R fully assembled, left-side view in the Shropshire countryside" loading="lazy" src="IMG_2466.png"/></a><div class="rmc-feature-info"><p class="rmc-feature-status">FOR SALE</p><h3>1998 Suzuki TL1000R</h3><p class="rmc-feature-meta">996cc V-twin · 40,490 miles · Yellow · 18 years with the last owner · 12 months MOT from 12.11.26</p><p class="rmc-feature-price">£4,495</p><p>Extensively recommissioned, with new Bridgestone tyres, new chain and sprockets, and original Suzuki exhausts. Viewings welcome.</p><div class="rmc-feature-links"><a class="btn" href="tl1000r-for-sale.html">View the TL1000R</a><a class="rmc-feature-secondary" href="tl1000r-build.html">Read the build journal</a></div></div></article></div></div></section><!-- TRUST STRIP -->
 <div aria-label="Revival Moto Co promises" class="trust-strip">
 <div class="trust-inner">
